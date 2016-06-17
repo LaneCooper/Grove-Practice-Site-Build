@@ -1,0 +1,10 @@
+﻿@model Ingeniux.Runtime.CMSPageRequest
+@{
+	ViewBag.Title = Model.Element("Title").ToNullHelper().Propagate<string>(ele => ele.Content.Value).Return("Home");
+	Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+@using Ingeniux.Runtime
+
+@{
+    Html.RenderPartial("Editable/BannerImage", new ViewDataDictionary(Model.Element("BannerImage")));
+}

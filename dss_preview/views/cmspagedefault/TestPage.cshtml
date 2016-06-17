@@ -1,0 +1,49 @@
+﻿@model Ingeniux.Runtime.CMSPageRequest
+@{
+	ViewBag.Title = Model.Element("Title").ToNullHelper().Propagate<string>(ele => ele.Content.Value).Return("Home");
+	Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+@using Ingeniux.Runtime
+@*Put home page content here*@ 
+
+<p>Hello World.</p>
+
+<p>
+    @Model.GetElementValue("MyText")
+</p>
+
+@{
+    Html.RenderPartial("Editable/MyText", new ViewDataDictionary(Model.Element("MyText")));
+
+
+
+<hr />
+
+    Html.RenderPartial("Editable/MyImage", new ViewDataDictionary(Model.Element("MyImage")));
+
+<hr />
+
+
+    Html.RenderPartial("Editable/Page", new ViewDataDictionary(Model.GetLinkItem("MyLink")));
+
+<hr />
+
+
+    Html.RenderPartial("Editable/LinkSet", new ViewDataDictionary(Model.GetNavigation("MyLinkSet", NavigationElementType.LinkSet)));
+
+<hr />
+
+
+    Html.RenderPartial("Editable/TestComponent", new ViewDataDictionary(Model.Element("TestComponent")));
+
+<hr />
+
+
+    Html.RenderPartial("Editable/Navigation", new ViewDataDictionary(Model.GetNavigation("MyNavigation")));
+    
+    <hr />
+    Html.RenderPartial("Editable/TaxonomyNavigation", new ViewDataDictionary(Model.GetTaxonomyNavigation("MyTaxonomyNavigation")));
+        
+    <hr />
+    Html.RenderPartial("Editable/FormInsert", new ViewDataDictionary(Model.Element("FormInsert")));
+}

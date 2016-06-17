@@ -1,0 +1,27 @@
+﻿@model Ingeniux.Runtime.CMSPageRequest
+@using Ingeniux.Runtime
+<p id="breadcrumbs">
+	@{
+	
+		if (Model != null)
+		{
+			var links = Model.GetNavigationItems("AncestorNavigation", NavigationElementType.Navigation, false).Where(ele => ele.Schema != "Folder");
+			var current = links.LastOrDefault();
+
+			foreach (var link in links)
+			{
+
+
+				if (link.URL != current.URL)
+				{
+		@Html.Raw(_Helpers.RenderCMSLink(link, Url) + " &#187; ")
+				}
+				else
+				{
+		@link.Name
+				}
+
+			}
+		}
+	}
+</p>

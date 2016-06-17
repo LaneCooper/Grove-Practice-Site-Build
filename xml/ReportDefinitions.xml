@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReportDefinitions>
+  <Reports NextID="38">
+    <Report Name="Pages checked out" Locale="en-us" Type="Simple" LastVisitUser="Ingeniux CMS Report Schedulers" LastVisitTime="20110320T22:00:00" LastChangeUser="ingeniux\awang" LastChanged="20110510T10:29:18" ID="1">
+      <Schedules NextID="1" />
+      <Documents>
+        <D>reference.xml</D>
+        <D>publishingtargets.xml</D>
+      </Documents>
+      <Query>/CombinedDocumentForReport/Site//Page[@CheckedOut = 'true']</Query>
+      <Columns IDColumnName="ID" NextID="10">
+        <Column AttributeName="PageType" Label="  " DataType="PageIcon" Width="20" ID="1" />
+        <Column AttributeName="Name" Label="Name" DataType="Text" Width="250" ID="2" />
+        <Column AttributeName="ID" Label="ID" DataType="PageId" Width="70" ID="3" />
+        <Column AttributeName="Schema" Label="Schema" DataType="Text" Width="150" ID="4" />
+        <Column AttributeName="AssignedUser" Label="Assigned User" DataType="Text" Width="100" ID="5" />
+        <Column AttributeName="Created" Label="Created Time" DataType="DateTime" Width="120" ID="6" />
+        <Column AttributeName="Changed" Label="Changed" DataType="DateTime" Width="120" ID="7" />
+        <Column AttributeName="LastChangedBy" Label="Last Changed By" DataType="Text" Width="130" ID="8" />
+        <Column AttributeName="MarkedForPublish" Label="Marked For Publishing" DataType="Text" Width="150" ID="9" />
+      </Columns>
+    </Report>
+    <Report Name="Pages assigned to user or group" Locale="en-us" Type="Parameterized" LastVisitUser="ingeniux\awang" LastVisitTime="20110320T07:12:02" LastChangeUser="ingeniux\awang" LastChanged="20110510T10:29:09" ID="2">
+      <Schedules NextID="1" />
+      <Documents>
+        <D>reference.xml</D>
+      </Documents>
+      <Query>/CombinedDocumentForReport/Site//Page[('%type%' = 'user' and @AssignedUser='%value%') or ('%type%' = 'group' and @AssignedGroup='%value%')]</Query>
+      <Columns IDColumnName="ID" NextID="11">
+        <Column AttributeName="PageType" Label=" " DataType="PageIcon" Width="20" ID="1" />
+        <Column AttributeName="Name" Label="Name" DataType="Text" Width="200" ID="2" />
+        <Column AttributeName="ID" Label="ID" DataType="PageId" Width="70" ID="3" />
+        <Column AttributeName="Schema" Label="Schema" DataType="Text" Width="150" ID="4" />
+        <Column AttributeName="Changed" Label="Changed" DataType="DateTime" Width="120" ID="5" />
+        <Column AttributeName="CheckedOut" Label="Checked Out" DataType="Text" Width="100" ID="6" />
+        <Column AttributeName="Created" Label="Created" DataType="DateTime" Width="120" ID="7" />
+        <Column AttributeName="CreatedBy" Label="Created By" DataType="Text" Width="100" ID="8" />
+        <Column AttributeName="LastChangedBy" Label="Last Changed By" DataType="Text" Width="130" ID="9" />
+        <Column AttributeName="MarkedForPublish" Label="Marked For Publish" DataType="Text" Width="130" ID="10" />
+      </Columns>
+      <Parameters NextID="4">
+        <Parameter Name="value" Label="ID of User or Group" Type="Text" DefaultValue="ingeniux\awang" ID="2" />
+        <Parameter ID="type" Name="type" Label="User or Group" Type="Select" DefaultValue="user">
+          <Options ID="3" NextID="3">
+            <Option Value="user" Label="User" ID="1" />
+            <Option Value="group" Label="Group" ID="2" />
+          </Options>
+        </Parameter>
+      </Parameters>
+    </Report>
+    <Report Name="Workflow Usage" Locale="en-us" Type="Advanced" LastVisitUser="" LastVisitTime="" LastChangeUser="User/INGENIUX___abusbin" LastChanged="20140612T08:44:30" ProviderURL="xml/custom/views/advancedReports/workflowUsageReport" ID="4">
+      <Schedules NextID="1" />
+    </Report>
+    <Report Name="Pages by partial schema name" Locale="en-us" Type="Parameterized" LastVisitUser="ingeniux\awang" LastVisitTime="20110318T08:16:11" LastChangeUser="ingeniux\awang" LastChanged="20110319T23:59:04" ID="5">
+      <Schedules NextID="1" />
+      <Documents>
+        <D>reference.xml</D>
+      </Documents>
+      <Query>//Page[contains(@Schema, '%schemaName%')][not(ancestor::*[@ID = 'x4'])]</Query>
+      <Columns IDColumnName="ID" NextID="12">
+        <Column AttributeName="PageType" Label=" " DataType="PageIcon" Width="20" ID="1" />
+        <Column AttributeName="ID" Label="ID" DataType="PageId" Width="80" ID="2" />
+        <Column AttributeName="Name" Label="Name" DataType="Text" Width="250" ID="3" />
+        <Column AttributeName="Schema" Label="Schema" DataType="Text" Width="200" ID="4" />
+        <Column AttributeName="CheckedOut" Label="Checked Out" DataType="Text" Width="100" ID="5" />
+        <Column AttributeName="MarkedForPublish" Label="Marked For Publish" DataType="Text" Width="160" ID="6" />
+        <Column AttributeName="AssignedUser" Label="Assigned User" DataType="Text" Width="150" ID="7" />
+        <Column AttributeName="Created" Label="Created" DataType="DateTime" Width="160" ID="8" />
+        <Column AttributeName="CreatedBy" Label="Created By" DataType="Text" Width="120" ID="9" />
+        <Column AttributeName="Changed" Label="Changed" DataType="DateTime" Width="160" ID="10" />
+        <Column AttributeName="LastChangedBy" Label="Last Changed By" DataType="Text" Width="120" ID="11" />
+      </Columns>
+      <Parameters NextID="2">
+        <Parameter Name="schemaName" Label="Partial Schema Name" Type="Text" DefaultValue="" ID="1" />
+      </Parameters>
+    </Report>
+    <Report Name="Pages marked for publish for publishing target" Locale="en-us" Type="Parameterized" LastVisitUser="ingeniux\awang" LastVisitTime="20110319T23:57:16" LastChangeUser="ingeniux\awang" LastChanged="20110319T23:57:05" ID="22">
+      <Schedules NextID="1" />
+      <Documents>
+        <D>reference.xml</D>
+        <D>publishingtargets.xml</D>
+      </Documents>
+      <Query>/CombinedDocumentForReport/Site//Page[(('%pubTargetName%' = 'All' or '%pubTargetName%' = 'all' or '%pubTargetName%' = '' ) and @MarkedForPublish = 'true') or @ID = /CombinedDocumentForReport/PublishingTargets/PublishingTarget[@Name = '%pubTargetName%']/Page/@ID]</Query>
+      <Columns IDColumnName="ID" NextID="12">
+        <Column AttributeName="PageType" Label=" " DataType="PageIcon" Width="20" ID="1" />
+        <Column AttributeName="ID" Label="ID" DataType="PageId" Width="120" ID="2" />
+        <Column AttributeName="Name" Label="Name" DataType="Text" Width="250" ID="3" />
+        <Column AttributeName="Schema" Label="Schema" DataType="Text" Width="160" ID="4" />
+        <Column AttributeName="CheckedOut" Label="Checked Out" DataType="Text" Width="100" ID="5" />
+        <Column AttributeName="MarkedForPublish" Label="Marked For Publish" DataType="Text" Width="180" ID="6" />
+        <Column AttributeName="AssignedUser" Label="Assigned User" DataType="Text" Width="150" ID="7" />
+        <Column AttributeName="Created" Label="Created" DataType="DateTime" Width="160" ID="8" />
+        <Column AttributeName="CreatedBy" Label="Created By" DataType="Text" Width="150" ID="9" />
+        <Column AttributeName="Changed" Label="Changed" DataType="DateTime" Width="160" ID="10" />
+        <Column AttributeName="LastChangedBy" Label="Last Changed By" DataType="Text" Width="150" ID="11" />
+      </Columns>
+      <Parameters NextID="2">
+        <Parameter Name="pubTargetName" Label="Publishing Target Name" Type="Text" DefaultValue="All" ID="1" />
+      </Parameters>
+    </Report>
+    <Report Name="Users with assigned pages" Locale="en-us" Type="Simple" LastVisitUser="ingeniux\awang" LastVisitTime="20110319T01:52:42" LastChangeUser="ingeniux\awang" LastChanged="20110319T01:54:39" ID="25">
+      <Schedules NextID="1" />
+      <Documents>
+        <D>reference.xml</D>
+        <D>users.xml</D>
+      </Documents>
+      <Query>/*/UserManager/Users/User[@UserID = /*/Site//Page/@AssignedUser]</Query>
+      <Columns IDColumnName="UserID" NextID="5">
+        <Column AttributeName="UserID" Label="ID" DataType="Text" Width="120" ID="1" />
+        <Column AttributeName="Name" Label="Name" DataType="Text" Width="300" ID="2" />
+        <Column AttributeName="Email" Label="Email" DataType="Text" Width="160" ID="3" />
+        <Column AttributeName="LastLogin" Label="Last Login" DataType="Text" Width="150" ID="4" />
+      </Columns>
+    </Report>
+    <Report Name="Pages created in time period" Locale="en-us" Type="Parameterized" LastVisitUser="ingeniux\awang" LastVisitTime="20110320T21:50:59" LastChangeUser="ingeniux\awang" LastChanged="20110320T14:45:18" ID="26">
+      <Schedules NextID="1" />
+      <Documents>
+        <D>reference.xml</D>
+      </Documents>
+      <Query>/*/Site//Page[ms:string-compare(@Created, '%period%') = 1]</Query>
+      <Columns IDColumnName="ID" NextID="12">
+        <Column AttributeName="PageType" Label=" " DataType="PageIcon" Width="20" ID="1" />
+        <Column AttributeName="ID" Label="ID" DataType="PageId" Width="80" ID="2" />
+        <Column AttributeName="Name" Label="Name" DataType="Text" Width="250" ID="3" />
+        <Column AttributeName="Schema" Label="Schema" DataType="Text" Width="200" ID="4" />
+        <Column AttributeName="CheckedOut" Label="Checked Out" DataType="Text" Width="100" ID="5" />
+        <Column AttributeName="MarkedForPublish" Label="Marked For Publish" DataType="Text" Width="180" ID="6" />
+        <Column AttributeName="AssignedUser" Label="Assigned User" DataType="Text" Width="150" ID="7" />
+        <Column AttributeName="Created" Label="Created" DataType="DateTime" Width="160" ID="8" />
+        <Column AttributeName="CreatedBy" Label="Created By" DataType="Text" Width="150" ID="9" />
+        <Column AttributeName="Changed" Label="Changed" DataType="Text" Width="160" ID="10" />
+        <Column AttributeName="LastChangedBy" Label="Last Changed By" DataType="DateTime" Width="190" ID="11" />
+      </Columns>
+      <Parameters NextID="2">
+        <Parameter ID="period" Name="period" Label="Time Period" Type="Select" DefaultValue="%TODAY%">
+          <Options ID="1" NextID="11">
+            <Option Value="%NOW-01:00%" Label="In Last Hour" ID="1" />
+            <Option Value="%NOW-24:00%" Label="In Last 24 Hours" ID="2" />
+            <Option Value="%TODAY%" Label="Today" ID="3" />
+            <Option Value="%THIS_WEEK%" Label="This Week" ID="4" />
+            <Option Value="%THIS_MONTH%&quot;" Label="This Month" ID="5" />
+            <Option Value="%THIS_YEAR%" Label="This Year" ID="6" />
+            <Option Value="%TODAY-1%" Label="Since Yesterday" ID="7" />
+            <Option Value="%TODAY-7%" Label="In Last 7 Days" ID="8" />
+            <Option Value="%TODAY-30%" Label="In Last 30 Days" ID="9" />
+            <Option Value="%TODAY-365%" Label="In Last 365 Days" ID="10" />
+          </Options>
+        </Parameter>
+      </Parameters>
+    </Report>
+    <Report Name="Groups with assigned pages" Locale="en-us" Type="Simple" LastVisitUser="ingeniux\awang" LastVisitTime="20110320T22:00:15" LastChangeUser="ingeniux\awang" LastChanged="20110320T22:03:22" ID="27">
+      <Schedules NextID="1" />
+      <Documents>
+        <D>reference.xml</D>
+        <D>users.xml</D>
+      </Documents>
+      <Query>/CombinedDocumentForReport/UserManager/Groups/Group[@ID= /CombinedDocumentForReport/Site//Page/@AssignedGroup]</Query>
+      <Columns IDColumnName="ID" NextID="3">
+        <Column AttributeName="ID" Label="Group ID" DataType="Text" Width="100" ID="1" />
+        <Column AttributeName="Name" Label="Group Name" DataType="Text" Width="250" ID="2" />
+      </Columns>
+    </Report>
+    <Report Name="Page Descendants" Locale="en-us" Type="Parameterized" LastVisitUser="ingeniux\awang" LastVisitTime="20110503T09:27:14" LastChangeUser="User/INGENIUX___abusbin" LastChanged="20140612T18:56:42" ID="30">
+      <Schedules NextID="2">
+        <Schedule Name="aswdfasdf" StartTime="20140614T22:00:00" Unit="Day" Number="1" ID="1">
+          <Recipients>
+            <R>somebody@ingeniux.com</R>
+          </Recipients>
+          <ParameterValues>
+            <P Name="pageId" Value="x11" />
+          </ParameterValues>
+        </Schedule>
+      </Schedules>
+      <Documents>
+        <D>reference.xml</D>
+      </Documents>
+      <Query>//Page[@ID='%pageId%']//Page</Query>
+      <Columns IDColumnName="ID" NextID="5">
+        <Column AttributeName="PageType" Label=" " DataType="PageIcon" Width="25" ID="1" />
+        <Column AttributeName="Name" Label="Name" DataType="Text" Width="250" ID="2" />
+        <Column AttributeName="ID" Label="ID" DataType="PageId" Width="60" ID="3" />
+        <Column AttributeName="Schema" Label="Schema" DataType="Text" Width="200" ID="4" />
+      </Columns>
+      <Parameters NextID="2">
+        <Parameter Name="pageId" Label="Page ID:" Type="Text" DefaultValue="" ID="1" />
+      </Parameters>
+    </Report>
+    <Report Name="Region Root Pages" Locale="en-us" Type="Simple" LastVisitUser="ingeniux\awang" LastVisitTime="20110508T22:25:33" LastChangeUser="ingeniux\awang" LastChanged="20110508T15:11:01" ID="32">
+      <Schedules NextID="1" />
+      <Documents>
+        <D>reference.xml</D>
+      </Documents>
+      <Query>/CombinedDocumentForReport/Site//Page[@Locale != '' and @LocaleInherited = 'false']</Query>
+      <Columns IDColumnName="ID" NextID="7">
+        <Column AttributeName="PageType" Label=" " DataType="PageIcon" Width="20" ID="1" />
+        <Column AttributeName="Name" Label="Name" DataType="Text" Width="250" ID="2" />
+        <Column AttributeName="ID" Label="ID" DataType="PageId" Width="80" ID="3" />
+        <Column AttributeName="Schema" Label="Schema" DataType="Text" Width="180" ID="4" />
+        <Column AttributeName="CheckedOut" Label="Checked Out" DataType="Text" Width="90" ID="5" />
+        <Column AttributeName="MarkedForPublish" Label="Marked For Publish" DataType="Text" Width="90" ID="6" />
+      </Columns>
+    </Report>
+    <Report Name="Lingual Mappings under Page" Locale="en-us" Type="Parameterized" LastVisitUser="ingeniux\awang" LastVisitTime="20110508T22:36:18" LastChangeUser="ingeniux\awang" LastChanged="20110510T00:16:10" ID="33">
+      <Schedules NextID="1" />
+      <Documents>
+        <D>reference.xml</D>
+        <D>lingualmapping.xml</D>
+      </Documents>
+      <Query>/CombinedDocumentForReport/LingualMapping/Maps/MP[@M = /CombinedDocumentForReport/Site//Page[@ID = '%pageId%']/descendant-or-self::Page/@ID]</Query>
+      <Columns IDColumnName="C" NextID="5">
+        <Column AttributeName="M" Label="Master Page ID" DataType="PageId" Width="150" ID="1" />
+        <Column AttributeName="ML" Label="Master Page Language" DataType="Text" Width="200" ID="2" />
+        <Column AttributeName="C" Label="Clone Page ID" DataType="PageId" Width="150" ID="3" />
+        <Column AttributeName="CL" Label="Clone Page Language" DataType="Text" Width="200" ID="4" />
+      </Columns>
+      <Parameters NextID="2">
+        <Parameter Name="pageId" Label="Page ID:" Type="Text" DefaultValue="" ID="1" />
+      </Parameters>
+    </Report>
+    <Report Name="Pages not up to date for all marked publishing targets" Locale="en-us" Type="Simple" LastVisitUser="ingeniux\awang" LastVisitTime="20110510T00:13:12" LastChangeUser="ingeniux\awang" LastChanged="20110510T00:01:47" ID="34">
+      <Schedules NextID="1" />
+      <Documents>
+        <D>reference.xml</D>
+        <D>publishingtargets.xml</D>
+      </Documents>
+      <Query>/CombinedDocumentForReport/Site//Page[@ID = /CombinedDocumentForReport/PublishingTargets/PublishingTarget/Page[@Version != '0']/@ID]</Query>
+      <Columns IDColumnName="ID" NextID="7">
+        <Column AttributeName="PageType" Label=" " DataType="PageIcon" Width="20" ID="1" />
+        <Column AttributeName="Name" Label="Name" DataType="Text" Width="250" ID="2" />
+        <Column AttributeName="ID" Label="ID" DataType="PageId" Width="80" ID="3" />
+        <Column AttributeName="Schema" Label="Schema" DataType="Text" Width="160" ID="4" />
+        <Column AttributeName="CheckedOut" Label="Checked Out" DataType="Text" Width="150" ID="5" />
+        <Column AttributeName="MarkedForPublish" Label="Marked For Publish" DataType="Text" Width="160" ID="6" />
+      </Columns>
+    </Report>
+    <Report Name="New Report Simple - 20140606T15:21:29" Locale="en-us" Type="Simple" LastVisitUser="" LastVisitTime="" LastChangeUser="" LastChanged="" ID="35">
+      <Schedules NextID="1" />
+      <Documents />
+      <Query></Query>
+      <Columns IDColumnName="" NextID="1" />
+    </Report>
+    <Report Name="New Report Simple - 20140606T15:21:40" Locale="en-us" Type="Simple" LastVisitUser="" LastVisitTime="" LastChangeUser="" LastChanged="" ID="36">
+      <Schedules NextID="1" />
+      <Documents />
+      <Query></Query>
+      <Columns IDColumnName="" NextID="1" />
+    </Report>
+    <Report Name="New Report Simple - 20140612T18:47:46" Locale="en-us" Type="Simple" LastVisitUser="" LastVisitTime="" LastChangeUser="" LastChanged="" ID="37">
+      <Schedules NextID="0" />
+      <Documents />
+      <Query></Query>
+      <Columns IDColumnName="" NextID="0" />
+    </Report>
+  </Reports>
+  <Tree NextID="6">
+    <Folder ID="1" Name="Site Reports">
+      <Report ID="1" />
+      <Report ID="2" />
+      <Report ID="5" />
+      <Report ID="22" />
+      <Report ID="26" />
+      <Report ID="30" />
+      <Report ID="34" />
+      <Report ID="36" />
+    </Folder>
+    <Folder ID="2" Name="User Reports">
+      <Report ID="25" />
+      <Report ID="27" />
+    </Folder>
+    <Folder ID="3" Name="Workflow Reports">
+      <Report ID="4" />
+    </Folder>
+    <Folder ID="4" Name="Comprehensive Reports">
+      <Report ID="33" />
+      <Report ID="32" />
+    </Folder>
+    <Folder ID="5" Name="Custom Reports">
+      <Report ID="35" />
+      <Report ID="37" />
+    </Folder>
+  </Tree>
+  <L10N>
+		<Locale ID="es-mx"></Locale>
+		<Locale ID="de-de"></Locale>
+		<Locale ID="fr-ca"></Locale>
+		<Locale ID="zh-cn"></Locale>
+		<Locale ID="en-is">
+			<Folder Name="Site Reports">
+				<Report Name="Pages checked out" ID="1">
+					<Schedules />
+					<Columns>
+						<Column Label="  " ID="1" />
+						<Column Label="Name" ID="2" />
+						<Column Label="ID" ID="3" />
+						<Column Label="Schema" ID="4" />
+						<Column Label="Assigned User" ID="5" />
+						<Column Label="Created Time" ID="6" />
+						<Column Label="Changed" ID="7" />
+						<Column Label="Last Changed By" ID="8" />
+						<Column Label="Marked For Publishing" ID="9" />
+						<Column Label="PCR" ID="10" />
+					</Columns>
+				</Report>
+				<Report Name="Pages assigned to user or group" ID="2">
+					<Schedules>
+						<Schedule Name="Bi-Weekly Report" ID="1" />
+					</Schedules>
+					<Columns>
+						<Column Label=" " ID="1" />
+						<Column Label="Name" ID="2" />
+						<Column Label="ID" ID="3" />
+						<Column Label="Schema" ID="4" />
+						<Column Label="Changed" ID="5" />
+						<Column Label="Checked Out" ID="6" />
+						<Column Label="Created" ID="7" />
+						<Column Label="Created By" ID="8" />
+						<Column Label="Last Changed By" ID="9" />
+						<Column Label="Marked For Publish" ID="10" />
+					</Columns>
+				</Report>
+			</Folder>
+			<Folder Name="User Reports" />
+			<Folder Name="Workflow Reports">
+				<Report Name="Current Workflow Activities" ID="3">
+					<Schedules />
+					<Columns />
+				</Report>
+			</Folder>
+			<Folder Name="Comprehensive Reports" />
+			<Folder Name="Custom Reports" />
+			<Report Name="Pages checked out" ID="1">
+				<Schedules />
+				<Columns>
+					<Column Label="  " ID="1" />
+					<Column Label="Name" ID="2" />
+					<Column Label="ID" ID="3" />
+					<Column Label="Schema" ID="4" />
+					<Column Label="Assigned User" ID="5" />
+					<Column Label="Created Time" ID="6" />
+					<Column Label="Changed" ID="7" />
+					<Column Label="Last Changed By" ID="8" />
+					<Column Label="Marked For Publishing" ID="9" />
+					<Column Label="PCR" ID="10" />
+				</Columns>
+			</Report>
+			<Report Name="Pages assigned to user or group" ID="2">
+				<Schedules>
+					<Schedule Name="Bi-Weekly Report" ID="1" />
+				</Schedules>
+				<Columns>
+					<Column Label=" " ID="1" />
+					<Column Label="Name" ID="2" />
+					<Column Label="ID" ID="3" />
+					<Column Label="Schema" ID="4" />
+					<Column Label="Changed" ID="5" />
+					<Column Label="Checked Out" ID="6" />
+					<Column Label="Created" ID="7" />
+					<Column Label="Created By" ID="8" />
+					<Column Label="Last Changed By" ID="9" />
+					<Column Label="Marked For Publish" ID="10" />
+				</Columns>
+			</Report>
+			<Report Name="Current Workflow Activities" ID="3">
+				<Schedules />
+				<Columns />
+			</Report>
+		</Locale>
+		
+	<Locale ID="en-us" /></L10N>
+</ReportDefinitions>

@@ -1,0 +1,53 @@
+﻿@model Ingeniux.Runtime.ICMSElement
+@using Ingeniux.Runtime
+@{
+    if (Model != null)
+    {
+        <footer class="widewrapper footer">
+            <div class="container">
+                <div class="row footer">
+                    <div class="col-sm-3">
+                        <h4>@Model.Element("AboutComponent").GetElementValue("AboutTitle")</h4>
+                        <p>@Html.Raw(Model.Element("AboutComponent").GetElementValue("AboutXHTML"))</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="indent30">
+                            <h4>@Model.Element("RecentNewsComponent").GetElementValue("RecentNews")</h4>
+                            <ul class="grove-list">
+                                @{ foreach (ICMSElement link in Model.Element("RecentNewsComponent").Element("LinkSet").Elements())
+                                    {
+                                <li><a href="@link.GetAttributeValue("URL")">@link.GetAttributeValue("Name")</a></li>
+                                    }
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="indent30">
+                            <h4>@Model.Element("FourthFooterSpot").GetElementValue("FourthFooterTitle")</h4>
+                            <ul class="grove-list">
+                                @Html.Raw(Model.Element("FourthFooterSpot").GetElementValue("FourthFooterBody"))
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <h4>@Model.GetElementValue("SocialMediaHeader")</h4>
+                        @{ foreach (ICMSElement link in Model.Element("SocialMediaSites").Elements())
+                            {<div>
+                        <a href="@link.GetAttributeValue("URL")">@link.GetAttributeValue("Link")</a>
+                            </div>}
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="copyright">
+                    <p>Designed by <a href="http://hackerthemes.com">HackerThemes</a></p>
+                </div>
+            </div>
+        </footer>
+
+    }
+}
+

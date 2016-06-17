@@ -1,0 +1,94 @@
+2016-06-15T16:20:03.6036164Z - 20364 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-15T16:20:05.6557338Z - 20364 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-15T16:20:22.6317047Z - 20364 - Info - No device data was returned, probably because no newer data is available.
+2016-06-15T20:25:43.3688562Z - 20364 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-15T20:25:45.6152601Z - 20364 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-15T20:26:03.9452923Z - 20364 - Info - No device data was returned, probably because no newer data is available.
+2016-06-15T21:43:56.6101505Z - 20364 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-15T21:43:58.3729536Z - 20364 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-15T21:44:17.5609873Z - 20364 - Info - No device data was returned, probably because no newer data is available.
+2016-06-15T22:19:20.1226550Z - 20364 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-15T22:19:21.4174573Z - 20364 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-15T22:19:41.6818929Z - 20364 - Info - No device data was returned, probably because no newer data is available.
+2016-06-15T23:37:49.1625260Z - 20364 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-15T23:37:50.3481281Z - 20364 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-15T23:38:09.9261625Z - 20364 - Info - No device data was returned, probably because no newer data is available.
+2016-06-15T23:49:03.5904522Z - 20364 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-15T23:49:04.8540544Z - 20364 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-15T23:49:24.9000896Z - 20364 - Info - No device data was returned, probably because no newer data is available.
+2016-06-16T05:49:24.1676267Z - 20364 - Info - No device data was returned, probably because no newer data is available.
+2016-06-16T11:49:24.4491656Z - 20364 - Info - No device data was returned, probably because no newer data is available.
+2016-06-16T16:20:29.0134647Z - 20364 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-16T16:20:30.0586665Z - 20364 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-16T16:20:49.7459011Z - 20364 - Info - No device data was returned, probably because no newer data is available.
+2016-06-16T16:57:33.1669439Z - 20364 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-16T16:57:34.5085463Z - 20364 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-16T16:57:53.9149803Z - 20364 - Info - No device data was returned, probably because no newer data is available.
+2016-06-16T17:48:42.0386696Z - 20364 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-16T17:48:43.2866718Z - 20364 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-16T17:49:02.8335061Z - 20364 - Info - No device data was returned, probably because no newer data is available.
+2016-06-16T18:47:17.0680949Z - 20364 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-16T18:47:18.2692970Z - 20364 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-16T18:47:37.7693313Z - 20364 - Info - No device data was returned, probably because no newer data is available.
+2016-06-16T20:28:50.6206404Z - 20364 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-16T20:28:51.6502422Z - 20364 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-16T20:29:11.4934771Z - 20364 - Info - No device data was returned, probably because no newer data is available.
+2016-06-16T21:23:25.0663917Z - 9344 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-16T21:23:26.2675938Z - 9344 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-16T21:23:45.1124269Z - 9344 - Info - No device data was returned, probably because no newer data is available.
+2016-06-16T21:40:40.7325365Z - 9344 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-16T21:40:42.0117388Z - 9344 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-16T21:41:01.4493729Z - 9344 - Info - No device data was returned, probably because no newer data is available.
+2016-06-16T23:00:39.7169417Z - 9344 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-16T23:00:40.8557437Z - 9344 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-16T23:01:01.0421791Z - 9344 - Info - No device data was returned, probably because no newer data is available.
+2016-06-17T05:01:00.4841173Z - 9344 - Info - No device data was returned, probably because no newer data is available.
+2016-06-17T11:01:00.4848557Z - 9344 - Info - No device data was returned, probably because no newer data is available.
+2016-06-17T15:42:58.7155711Z - 9344 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T15:42:59.8543731Z - 9344 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T15:43:19.8380082Z - 9344 - Info - No device data was returned, probably because no newer data is available.
+2016-06-17T17:21:46.4610334Z - 9344 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T17:21:47.7870358Z - 9344 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T17:22:07.3962702Z - 9344 - Info - No device data was returned, probably because no newer data is available.
+2016-06-17T17:38:20.9129244Z - 9344 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T17:38:22.0361263Z - 9344 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T17:38:41.7077609Z - 9344 - Info - No device data was returned, probably because no newer data is available.
+2016-06-17T17:40:42.4937395Z - 9344 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T17:40:44.0693422Z - 9344 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T17:41:03.1637758Z - 9344 - Info - No device data was returned, probably because no newer data is available.
+2016-06-17T18:16:30.1312220Z - 2792 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T18:16:31.8784251Z - 2792 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T18:16:49.6000562Z - 2792 - Info - No device data was returned, probably because no newer data is available.
+2016-06-17T18:33:09.9724069Z - 2792 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T18:33:11.4076094Z - 2792 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T18:33:30.8140435Z - 2792 - Info - No device data was returned, probably because no newer data is available.
+2016-06-17T20:43:52.1694366Z - 2792 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T20:43:53.1522384Z - 2792 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T20:44:13.2606737Z - 2792 - Info - No device data was returned, probably because no newer data is available.
+2016-06-17T20:46:37.2367153Z - 2792 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T20:46:38.2195170Z - 2792 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T20:46:58.0939519Z - 2792 - Info - No device data was returned, probably because no newer data is available.
+2016-06-17T20:53:04.7241411Z - 2792 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T20:53:05.5665426Z - 2792 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T20:53:25.6437778Z - 2792 - Info - No device data was returned, probably because no newer data is available.
+2016-06-17T21:00:21.9636378Z - 2792 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T21:00:22.9308395Z - 2792 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T21:00:42.8676745Z - 2792 - Info - No device data was returned, probably because no newer data is available.
+2016-06-17T21:36:26.7705693Z - 2792 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T21:36:28.0185715Z - 2792 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T21:36:47.6434060Z - 2792 - Info - No device data was returned, probably because no newer data is available.
+2016-06-17T21:44:10.7844321Z - 2792 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T21:44:11.6580336Z - 2792 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T21:44:31.4232683Z - 2792 - Info - No device data was returned, probably because no newer data is available.
+2016-06-17T21:46:18.4527734Z - 2792 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T21:46:19.5135752Z - 2792 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T21:46:39.2008098Z - 2792 - Info - No device data was returned, probably because no newer data is available.
+2016-06-17T21:53:51.1534580Z - 2792 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T21:53:51.9646594Z - 2792 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T21:54:12.2602951Z - 2792 - Info - No device data was returned, probably because no newer data is available.
+2016-06-17T22:05:10.1948437Z - 2792 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T22:05:11.0840453Z - 2792 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T22:05:31.0364803Z - 2792 - Info - No device data was returned, probably because no newer data is available.
+2016-06-17T22:13:42.8460827Z - 2792 - Info - Creating memory provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T22:13:43.7040842Z - 2792 - Info - Created provider from binary data file 'C:\igxsites\Grove\site\DSS_Preview\App_Data\IGX.mobi.dat'.
+2016-06-17T22:14:03.5317190Z - 2792 - Info - No device data was returned, probably because no newer data is available.

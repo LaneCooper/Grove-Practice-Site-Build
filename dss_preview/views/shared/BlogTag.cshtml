@@ -1,0 +1,14 @@
+﻿@model Ingeniux.Runtime.ICMSElement
+@using Ingeniux.Runtime
+
+<!--Still need to tackle Taxography to finish this tag view-->
+@{
+    if (Model != null)
+    {
+        <div class="meta">
+            Posted By @Model.GetElementValue("Author") On @Model.GetElementValue("PublicationDate") In 
+            <span class="tags"> <a href="#" class="tag">Business</a>, <a href="#" class="tag">Design</a>, 
+            <a href="#" class="tag">Marketing</a></span>
+        </div>
+    }
+}

@@ -1,0 +1,164 @@
+
+/* -------------------------------- Forms ---------------------------------------- */
+form.formBuilder label.label span {
+	float: left;
+	width: 30%;
+	text-align: right;
+}
+
+label.error {
+	float: none;
+	color: red;
+	padding-left: .5em;
+	vertical-align: top;
+}
+
+form.formBuilder {
+	padding: 20px 20px 60px 20px;
+	margin: 0px 0 60px 0;
+	min-height: 70px;
+	position: relative;
+}
+
+	form.formBuilder .inputWrapper {
+		width: 100%;
+		padding: 0 10px 0 5px;
+		display: block;
+		float: left;
+	}
+
+	form.formBuilder fieldset.radio {
+		display:block;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	form.formBuilder input.radio, input.submit, input.checkbox {
+		width: auto;
+		display: inline-block;
+		margin: 0 10px 0 0;
+		float:none;
+		min-height:inherit;
+		vertical-align: auto;
+	}
+
+
+		/*
+		   Hack to make sure the floated radio buttons
+		  sit next to the labels correctly in IE/Mac
+		 */
+		/* This is the style I want IE/Mac to see */
+
+		form.formBuilder input.radio + label {
+			text-indent: 2em;
+		}
+		/*
+   Using the commented backslash filter, I'm resetting
+  the above rule for everything other than IE5/Mac \
+ */
+
+		form.formBuilder input.radio + label {
+			text-indent: 0;
+		}
+	/* ---------------- Forms ------------------ */
+
+
+	form.formBuilder label.label {
+		display: inline;
+		font-weight: bold;
+		font-size: 14px;
+		padding-right: 10px;
+		color: black;
+	}
+
+	form.formBuilder label.labelForCheckbox {
+		width: 100%;
+	}
+
+	form.formBuilder div.formDivider {
+		clear: both;
+		width: 100%;
+		margin: 5px 0px;
+	}
+	/* Top of field */
+
+	form.formBuilder.Top_of_Field input, form.formBuilder.Top_of_Field select {
+		width: 100%;
+	}
+	/* Left of Field */
+
+	form.formBuilder.Left_of_Field div.label {
+		clear: none;
+		width: 100%;
+		display: inline;
+		float: left;
+	}
+
+	form.formBuilder input.text, form.formBuilder input.password, form.formBuilder textarea {
+		width: 100%;
+		padding: 4px;
+		vertical-align: middle;
+		-webkit-border-radius: 4px !important;
+		-moz-border-radius: 4px !important;
+		border-radius: 4px !important;
+		border: 1px solid #808080;
+		display: inline-block;
+		-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+		-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+		box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	}
+
+	form.formBuilder input.password {
+		width: auto;
+	}
+
+	form.formBuilder select {
+		max-width: 100%;
+		padding: 4px 6px;
+		vertical-align: middle;
+		-webkit-border-radius: 4px !important;
+		-moz-border-radius: 4px !important;
+		border-radius: 4px !important;
+		border: 1px solid #808080;
+		display: inline-block;
+	}
+
+	form.formBuilder textarea {
+		height: 100px;
+		resize:vertical;
+	}
+
+	form.formBuilder input.button, form.formBuilder input.reset, form.formBuilder input.submit {
+		width: auto;
+		display: inline-block;
+		padding: 4px 12px;
+		margin-bottom: 0;
+		color: #333333;
+		text-align: center;
+		text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+		vertical-align: middle;
+		cursor: pointer;
+		background-color: #f5f5f5;
+		background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+		background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+		background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+		background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+		background-repeat: repeat-x;
+		border: 1px solid #808080;
+		border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+		border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+		border-bottom-color: #b3b3b3;
+		-webkit-border-radius: 4px !important;
+		-moz-border-radius: 4px !important;
+		border-radius: 4px !important;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+		filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+		-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+		-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	}
+
+	form.formBuilder input.submit {
+		float: right;
+	}

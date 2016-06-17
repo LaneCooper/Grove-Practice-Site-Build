@@ -1,0 +1,149 @@
+﻿@model Ingeniux.Runtime.CMSPageRequest
+@using Ingeniux.Runtime
+
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+<head>
+
+    @{
+        Layout = "~/Views/Shared/_MainLayout.cshtml";
+        Html.RenderPartial("WorkTitle", new ViewDataDictionary(Model.Element("WorkTitle")));
+    }
+
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" href="css/vendor/bootstrap/bootstrap.css">
+
+    <!-- Glyphicons -->
+    <link rel="stylesheet" href="css/vendor/glyphicons/glyphicons.css">
+    <link rel="stylesheet" href="css/vendor/glyphicons/filetypes.css">
+    <link rel="stylesheet" href="css/vendor/glyphicons/social.css">
+
+    <!-- Google Webfonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+
+    <!-- Grove Styles (switch for different color schemes, e.g. "styles-cleanblue.css") -->
+    <link rel="stylesheet" href="css/styles-blue.css" id="grove-styles">
+
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="css/ie8.css">
+        <script src="js/vendor/google/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery/jquery-1.9.1.min.js"><\/script>')</script>
+
+</head>
+
+<body>
+    <header>
+        <!--
+        <nav class="navbar navbar-default grove-navbar" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="#" class="grove-toggle" data-toggle="collapse" data-target=".grove-nav">   <i class="glyphicons show_lines"></i>  </a>
+                    <a href="index.html" class="navbar-brand"><img src="img/logo.png" alt="Grove"></a>
+                </div>
+
+                <div class="collapse navbar-collapse grove-nav">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="dropdown active">
+                            <a href="#" data-toggle="dropdown">Pages <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="features.html">Features Page</a></li>
+                                <li><a href="pricing.html">Pricing Tables</a></li>
+                                <li><a href="comparison.html">Product Comparison</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="blog-inner.html">Blog Detail</a></li>
+                                <li><a href="portfolio.html">Portfolio</a></li>
+                                <li><a href="portfolio-inner.html">Portfolio Detail</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="login.html">Login/Signup</a></li>
+                                <li><a href="404.html">404</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown">Features <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="glyphicons.html">Glyphicons</a></li>
+                                <li><a href="buttons.html">Buttons</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse 
+            </div>
+        </nav>
+        -->
+        @{
+            Layout = "~/Views/Shared/_MainLayout.cshtml";
+            Html.RenderPartial("WorkHead", new ViewDataDictionary(Model.Element("WorkTitle")));
+        }
+        
+        
+    </header>
+
+    <div class="widewrapper">
+        <div class="container content">
+            <div class="row">
+                @{
+                    Layout = "~/Views/Shared/_MainLayout.cshtml";
+                    Html.RenderPartial("WorkImage", new ViewDataDictionary(Model.Element("FullImage")));
+                }
+                
+               
+                <div class="col-sm-6">
+                    <h2>@Model.GetElementValue("WorkTitle")</h2>
+                    <p><strong>
+                        @Model.GetElementValue("WorkSummary")
+                           </strong>
+                    </p>
+                    
+                    @{
+                        Layout = "~/Views/Shared/_MainLayout.cshtml";
+                        Html.RenderPartial("WorkBody", new ViewDataDictionary(Model.Element("WorkBody")));
+                    }
+                   
+                  
+                    @{
+                        Layout = "~/Views/Shared/_MainLayout.cshtml";
+                        Html.RenderPartial("Lists/ListofHighlights", new ViewDataDictionary(Model.Element("ListofHighlights")));
+                    } 
+                    
+                   
+                    @{
+                        Layout = "~/Views/Shared/_MainLayout.cshtml";
+                        Html.RenderPartial("WorkLink", new ViewDataDictionary(Model.Element("Page")));
+                    }      
+
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @{
+        Layout = "~/Views/Shared/_MainLayout.cshtml";
+        Html.RenderPartial("WorkCalltoAction", new ViewDataDictionary(Model.Element("CalltoActionComponent")));
+    }
+    
+    @{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    Html.RenderPartial("Components/SiteControlComponent", new ViewDataDictionary(Model.Element("SiteControlComponent")));
+    }
+
+    <script src="js/vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="js/vendor/modernizr/modernizr.js"></script>
+</body>
+</html>

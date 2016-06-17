@@ -1,0 +1,13 @@
+﻿@model Ingeniux.Runtime.ICMSElement
+@using Ingeniux.Runtime
+
+
+@{
+    if (Model != null)
+    {
+        <div class="col-sm-6">
+            <img src="images/@Model.Value" class="img-responsive" alt="Server">
+        </div>
+
+    }
+}

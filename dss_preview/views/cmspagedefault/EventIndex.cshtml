@@ -1,0 +1,153 @@
+﻿@model Ingeniux.Runtime.CMSPageRequest
+@using Ingeniux.Runtime
+@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<div class="widewrapper weak-highlight">
+    <div class="container content">
+        <div class="row">
+            <div class="col-sm-12">
+                <img src="images/banners/prairie.jpg" class="img-responsive" alt="Dessert">
+            </div>
+
+            <div class="col-sm-12">
+                @{
+                    Html.RenderPartial("Editable/Title", new ViewDataDictionary(Model.Element("Title")));
+                }
+                @{
+                    Html.RenderPartial("Editable/BodyCopy", new ViewDataDictionary(Model.Element("BodyCopy")));
+                }
+            </div>
+        </div>
+        <div class="row">
+            <div class="showroom-item col-sm-3">
+                <div class="image">
+                    <img src="images/portfolio/port-server.png" class="img-responsive" alt="Portfolio Image">
+                    <a class="overlay" href="portfolio-inner.html">
+                        <i class="glyphicons search"></i>
+                        <div class="name">Server Security<br />Something More</div>
+                    </a>
+                </div>
+            </div>
+            <div class="showroom-item col-sm-3">
+                <div class="image">
+
+                    <img src="images/portfolio/port-code.png" class="img-responsive" alt="Portfolio Image">
+                    <a class="overlay" href="portfolio-inner.html">
+                        <i class="glyphicons search"></i>
+                        <div class="name">Code Security Review</div>
+                    </a>
+                </div>
+            </div>
+            <div class="showroom-item col-sm-3">
+                <div class="image">
+                    <img src="images/portfolio/port-storage.png" class="img-responsive" alt="Portfolio Image">
+                    <a class="overlay" href="portfolio-inner.html">
+                        <i class="glyphicons search"></i>
+                        <div class="name">Storage Consulting</div>
+                    </a>
+                </div>
+            </div>
+            <div class="showroom-item col-sm-3">
+                <div class="image">
+                    <img src="images/portfolio/port-car.png" class="img-responsive" alt="Portfolio Image">
+                    <a class="overlay" href="portfolio-inner.html">
+                        <i class="glyphicons search"></i>
+                        <div class="name">Blue Car</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="showroom-item col-sm-3">
+                <div class="image">
+
+                    <img src="images/portfolio/port-code.png" class="img-responsive" alt="Portfolio Image">
+                    <a class="overlay" href="portfolio-inner.html">
+                        <i class="glyphicons search"></i>
+                        <div class="name">Code Security Review</div>
+                    </a>
+                </div>
+            </div>
+            <div class="showroom-item col-sm-3">
+                <div class="image">
+                    <img src="images/portfolio/port-server.png" class="img-responsive" alt="Portfolio Image">
+                    <a class="overlay" href="portfolio-inner.html">
+                        <i class="glyphicons search"></i>
+                        <div class="name">Server Security</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="showroom-item col-sm-3">
+                <div class="image">
+                    <img src="images/portfolio/port-car.png" class="img-responsive" alt="Portfolio Image">
+                    <a class="overlay" href="portfolio-inner.html">
+                        <i class="glyphicons search"></i>
+                        <div class="name">Blue Car</div>
+                    </a>
+                </div>
+            </div>
+            <div class="showroom-item col-sm-3">
+                <div class="image">
+                    <img src="images/portfolio/port-storage.png" class="img-responsive" alt="Portfolio Image">
+                    <a class="overlay" href="portfolio-inner.html">
+                        <i class="glyphicons search"></i>
+                        <div class="name">Storage Consulting</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="showroom-item col-sm-3">
+                <div class="image">
+                    <img src="images/portfolio/port-storage.png" class="img-responsive" alt="Portfolio Image">
+                    <a class="overlay" href="portfolio-inner.html">
+                        <i class="glyphicons search"></i>
+                        <div class="name">Storage Consulting</div>
+                    </a>
+                </div>
+            </div>
+            <div class="showroom-item col-sm-3">
+                <div class="image">
+                    <img src="images/portfolio/port-car.png" class="img-responsive" alt="Portfolio Image">
+                    <a class="overlay" href="portfolio-inner.html">
+                        <i class="glyphicons search"></i>
+                        <div class="name">Blue Car</div>
+                    </a>
+                </div>
+            </div>
+            <div class="showroom-item col-sm-3">
+                <div class="image">
+                    <img src="images/portfolio/port-server.png" class="img-responsive" alt="Portfolio Image">
+                    <a class="overlay" href="portfolio-inner.html">
+                        <i class="glyphicons search"></i>
+                        <div class="name">Server Security</div>
+                    </a>
+                </div>
+            </div>
+            <div class="showroom-item col-sm-3">
+                <div class="image">
+
+                    <img src="images/portfolio/port-code.png" class="img-responsive" alt="Portfolio Image">
+                    <a class="overlay" href="portfolio-inner.html">
+                        <i class="glyphicons search"></i>
+                        <div class="name">Code Security Review</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<div class="widewrapper strong-highlight">
+    <div class="container calltoaction">
+        <span>Buttons sell products! Call your visitors to action with this bold button.</span>
+        <a href="https://wrapbootstrap.com/theme/grove-responsive-business-theme-WB09B7SFK" class="btn btn-grove-one btn-xlg btn-bold">Purcharse Grove now!</a>
+    </div>
+</div>
+

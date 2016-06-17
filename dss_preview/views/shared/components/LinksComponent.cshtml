@@ -1,0 +1,11 @@
+﻿@model Ingeniux.Runtime.ICMSElement
+@using Ingeniux.Runtime
+
+<div class="list-group">
+    <h3 class="list-group-item">@Model.GetElementValue("Heading") test</h3>
+    @{
+        foreach(ICMSLinkElement link in Model.GetLinkItems()){
+              @_Helpers.RenderCMSLink(link, Url, "", false, "list-group-item")
+        }
+    }
+</div>

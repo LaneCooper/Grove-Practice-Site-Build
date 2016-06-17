@@ -1,0 +1,33 @@
+﻿@model Ingeniux.Runtime.ICMSNavigationElement
+@using Ingeniux.Runtime
+@{	
+
+	if (Model != null)
+	{
+		<div class="widewrapper weak-highlight">
+            <div class="container content">
+                <div class="showroom-controls">
+                    <div class="links">@Model.GetAttributeValue("Title")</div>
+                </div>
+                <div class="row">
+                    @{
+                        foreach (ICMSLinkElement link in Model.GetLinkItems()) { 
+                        <div class="showroom-item col-sm-3">
+                            <div class="image">
+                                <img src="images/@link.GetAttributeValue("PortfolioImage")" class="img-responsive" alt="@link.GetAttributeValue("Name")">
+                                <a class="overlay" href="portfolio-inner.html">
+                                    <i class="glyphicons search"></i>
+                                    <div class="name">@link.GetAttributeValue("Title")</div>
+                                </a>
+                            </div>
+                        </div>
+                        }
+                    }
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+        
+	}
+}

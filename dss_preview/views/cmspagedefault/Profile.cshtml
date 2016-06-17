@@ -1,0 +1,36 @@
+﻿@model Ingeniux.Runtime.CMSPageRequest
+@using Ingeniux.Runtime
+@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<div class="widewrapper">
+    <div class="container content">
+        <div class="row">
+            <div class="col-sm-6">
+                @_Helpers.RenderImage(Model.Element("ProfileImage"), Url, "img-responsive")
+            </div>
+
+            <div class="col-sm-6">
+               @{
+                    Html.RenderPartial("Editable/Title", new ViewDataDictionary(Model.Element("Title")));
+                    <div class="well">
+                        <h4>Title: @{Html.RenderPartial("Editable/ProfessionalTitle", new ViewDataDictionary(Model.Element("ProfessionalTitle")));}</h4>
+                        <h4>Phone: @{Html.RenderPartial("Editable/Phone", new ViewDataDictionary(Model.Element("Phone")));}</h4>
+                        <h4>Email: @{Html.RenderPartial("Editable/Email", new ViewDataDictionary(Model.Element("Email")));}</h4>
+                    </div>
+                    Html.RenderPartial("Editable/BodyCopy", new ViewDataDictionary(Model.Element("BodyCopy")));
+                }
+            </div>
+        </div>
+        @{
+            Html.RenderPartial("Lists/CallToActionComponents", new ViewDataDictionary(Model.Element("CalltoActionComponents")));
+        }
+        <div class="row">
+            @{
+                Html.RenderPartial("Editable/BodyCopy", new ViewDataDictionary(Model.Element("LowerCopy")));
+            }
+        </div>
+    </div>
+</div>
+
+<div class="widewrapper strong-highlight">

@@ -1,0 +1,50 @@
+﻿@model Ingeniux.Runtime.ICMSElement
+@using Ingeniux.Runtime
+
+@{
+    if (Model != null)
+    {
+        <div class="col-sm-3">
+            <div class="showroom-controls">
+                <div class="links">@Model.GetElementValue("TestimonialsTitle")</div>
+                <div class="controls">
+                    <a class="left" href="#testimonials-carousel" data-slide="prev"></a>
+                    <a class="right" href="#testimonials-carousel" data-slide="next"></a>
+                </div>
+            </div>
+
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="testimonials-carousel" class="carousel slide testimonials">
+                            <!-- Carousel items -->
+                            <div class="carousel-inner">
+                                <div class="active item testimonial-item">
+                                    <div class="bubble">
+                                        "Truly revolutionary tech. They asked me to give this testimonial and everything!"
+                                    </div>
+                                    <div class="client"><a href="#"> Michael J.</a>, NotPaidToBeHere Inc.</div>
+                                </div>
+                                @{ foreach (ICMSElement testimonial in Model.Element("Testimonials").Elements())
+                                    {
+                                        <div class="item testimonial-item">
+                                            <div class="bubble">
+                                                @Html.Raw(testimonial.GetElementValue("TestimonialText"))
+                                            </div>
+                                            <div class="client">
+                                                <a href="#"> @testimonial.GetElementValue("TestimonialAuthor")</a>,
+                                                @testimonial.GetElementValue("AuthorCompany")
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+</div>
+
+
+
+    }
+}

@@ -1,0 +1,59 @@
+﻿@model Ingeniux.Runtime.CMSPageRequest
+@using Ingeniux.Runtime
+@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<div class="widewrapper">
+    <div class="container content">
+
+        <div class="row">
+            <div class="col-sm-12">
+                @{
+                    Html.RenderPartial("Editable/Title", new ViewDataDictionary(Model.Element("Title")));
+                    Html.RenderPartial("Editable/Subtitle", new ViewDataDictionary(Model.Element("Subtitle")));
+                    Html.RenderPartial("Editable/BodyCopy", new ViewDataDictionary(Model.Element("BodyCopy")));
+
+                }
+            </div>
+        </div>
+    </div>
+</div>
+ @{
+        Html.RenderPartial("Lists/CallToActionComponents", new ViewDataDictionary(Model.Element("CalltoActionComponents")));
+     }
+<div class="widewrapper">
+    <div class="container content">
+        <div class="row">
+            <div class="col-sm-12">
+                @{
+                    Html.RenderPartial("Editable/BodyCopy", new ViewDataDictionary(Model.Element("LowerCopy")));
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<div class="widewrapper weak-highlight">
+    <div class="container content">
+        <div class="showroom-controls">
+            <div class="links">Our Team</div>
+        </div>
+        <div class="row">
+            @{
+                foreach (ICMSLinkElement profile in Model.GetNavigationItems("DepartmentCategory", NavigationElementType.TaxonomyNavigation, false, true))
+                {
+                    <div class="col-sm-4 team-member">
+                        <img src="images/@profile.GetAttributeValue("Thumbnail")" class="img-responsive" alt="@profile.GetAttributeValue("FirstName") @profile.GetAttributeValue("LastName")">
+                        <div class="description">
+                            <h4><a href="@profile.GetAttributeValue("URL")">@profile.GetAttributeValue("FirstName") @profile.GetAttributeValue("LastName")</a></h4> <h5>@profile.GetAttributeValue("ProfessionalTitle")</h5>
+                            <p>
+                                @profile.GetAttributeValue("Teaser")
+                            </p>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>
+
+<div class="widewrapper strong-highlight">

@@ -1,0 +1,54 @@
+﻿@model Ingeniux.Runtime.ICMSEnvironment
+@using Ingeniux.Runtime
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Grove - Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" href="@Url.Asset("prebuilt/css/vendor/bootstrap/bootstrap.css", Model)">
+
+    <!-- Glyphicons -->
+    <link rel="stylesheet" href="@Url.Asset("prebuilt/css/vendor/glyphicons/glyphicons.css", Model)">
+    <link rel="stylesheet" href="@Url.Asset("prebuilt/css/vendor/glyphicons/filetypes.css", Model)">
+    <link rel="stylesheet" href="@Url.Asset("prebuilt/css/vendor/glyphicons/social.css", Model)">
+
+    <!-- Google Webfonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+
+    <!-- LayerSlider styles -->
+    <link rel="stylesheet" href="@Url.Asset("prebuilt/css/vendor/layerslider/layerslider.css", Model)" type="text/css">
+
+    <!-- Grove Styles (switch for different color schemes, e.g. "styles-cleanblue.css") -->
+    <link rel="stylesheet" href="@Url.Asset("prebuilt/css/styles-blue.css", Model)" id="grove-styles">
+
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="css/ie8.css">
+        <script src="@Url.Asset("prebuilt/js/vendor/google/html5-3.6-respond-1.1.0.min.js", Model)"></script>
+    <![endif]-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="@Url.Asset("prebuilt/js/vendor/jquery/jquery-1.9.1.min.js", Model)"><\/script>')</script>
+    <!-- jQuery with jQuery Easing, and jQuery Transit JS -->
+    <!-- LayerSlider from Kreatura Media with Transitions -->
+    <script src="@Url.Asset("prebuilt/js/vendor/layerslider/greensock.js", Model)" type="text/javascript"></script>
+    <script src="@Url.Asset("prebuilt/js/vendor/layerslider/layerslider.transitions.js", Model)" type="text/javascript"></script>
+    <script src="@Url.Asset("prebuilt/js/vendor/layerslider/layerslider.kreaturamedia.jquery.js", Model)" type="text/javascript"></script>
+
+    <!-- Grove Layerslider initiation script -->
+    <script src="@Url.Asset("prebuilt/js/grove-slider.js", Model)" type="text/javascript"></script>
+
+</head> 
+
+<body>
+    
+    @RenderBody()
+    <script src="@Url.Asset("prebuilt/js/vendor/bootstrap/bootstrap.min.js", Model)"></script>
+    <script src="@Url.Asset("prebuilt/js/vendor/modernizr/modernizr.js", Model)"></script>
+</body>
+</html>

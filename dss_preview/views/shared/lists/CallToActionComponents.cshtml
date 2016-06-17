@@ -1,0 +1,28 @@
+﻿@model Ingeniux.Runtime.ICMSElement
+@using Ingeniux.Runtime
+@{
+    if (Model != null)
+    {
+        <div class="widewrapper">
+            <div class="container">
+                <div class="row features">
+                    @{
+                        foreach (ICMSElement CTAComp in Model.Elements("CallToActionComponent"))
+                        {
+                            <div class="col-sm-4 feature">
+                                <h3><a class="@CTAComp.GetElementValue("Icon")"></a>@CTAComp.GetElementValue("Heading")</h3>
+                                @Html.Raw(CTAComp.GetElementValue("Copy"))
+                                @{
+                                    if (CTAComp.GetLinkItems().Any()) { 
+                                        @_Helpers.RenderCMSLink(CTAComp.GetLinkItem("ButtonLink"), Url, "", false, "btn btn-grove-one btn-xlg btn-bold")                                 
+                                    }
+                                }
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    
+    }
+}

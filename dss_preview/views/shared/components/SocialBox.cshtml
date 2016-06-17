@@ -1,0 +1,16 @@
+﻿@model Ingeniux.Runtime.ICMSElement
+@using Ingeniux.Runtime
+
+<div class="col-sm-4">
+    @{
+        if (!Model.GetElementValue("Heading").IsNullOrEmpty()) { 
+            <h4>@Model.GetElementValue("Heading")</h4> 
+        }
+        foreach (ICMSElement socLink in Model.Elements("SocialMediaLink")) { 
+            <a href="@socLink.GetLinkItem("SocialMediaLink").GetAttributeValue("URL")" class="social @socLink.GetElementValue("Icon").ToLower()"></a>
+        }
+}
+
+    
+
+</div>

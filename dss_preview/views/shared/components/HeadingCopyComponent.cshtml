@@ -1,0 +1,9 @@
+﻿@model Ingeniux.Runtime.ICMSElement
+@using Ingeniux.Runtime
+
+<div class="panel panel-default">
+    <div class="panel-heading"><h3>@Model.GetElementValue("Heading")</h3></div>
+    <div class="panel-body">
+        @Html.Raw(Model.GetElementValue("Copy"))
+    </div>
+</div>

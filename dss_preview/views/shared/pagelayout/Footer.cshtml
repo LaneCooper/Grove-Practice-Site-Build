@@ -1,0 +1,37 @@
+﻿@model Ingeniux.Runtime.ICMSElement
+@using Ingeniux.Runtime
+@using System.Xml.Linq;
+
+<footer class="widewrapper footer">
+    <div class="container">
+        <div class="row footer">
+            @{
+                if (Model != null)
+                {
+                    //if components are set on the page, use them
+                    var compsToDisplay = Model.Element("FooterBoxes").Elements().Where(ele => ele.GetAttributeValue("Name") == "FooterBox");
+                    if (compsToDisplay.Any())
+                    {
+                        foreach (var comp in compsToDisplay)
+                        {
+                            try
+                            {
+                                Html.RenderPartial("Components/" + (comp as CMSPageRequest).RootElementName, comp);    
+                            }
+                            catch (Exception e)
+                            {
+                                // no view
+                            }
+                        }
+                    }
+                }
+            }
+       </div>
+    </div>
+
+    <div class="container">
+        <div class="copyright">
+            <p>@Model.GetElementValue("Copyright")</p>
+        </div>
+    </div>
+</footer>

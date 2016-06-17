@@ -1,0 +1,275 @@
+[INFO] [2016-06-15 12:20:06.2457] - Registering CMS AppDomain Listener - 10199cc4-5087-4c12-af08-0a51678fcd0e
+[INFO] [2016-06-15 12:20:06.2597] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-15 12:20:06.6657] - Updating CSAPI Indexes
+[INFO] [2016-06-15 12:20:07.6868] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-15 12:20:08.1368] - Ingeniux CMS Site Instance Started Successfully
+[WARN] [2016-06-15 16:16:12.8914] - [ContentStore: 10199cc4-5087-4c12-af08-0a51678fcd0e] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[ERROR] [2016-06-15 16:16:42.9527] - [ContentStore: 10199cc4-5087-4c12-af08-0a51678fcd0e] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-15 16:16:45.6515] - Publishing Thread Aborted by user
+[INFO] [2016-06-15 16:25:46.3484] - Registering CMS AppDomain Listener - 540a4403-e9f4-4fc4-97ac-90c54571c5fd
+[INFO] [2016-06-15 16:25:46.3484] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-15 16:25:46.6448] - Updating CSAPI Indexes
+[INFO] [2016-06-15 16:25:47.7836] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-15 16:25:48.4388] - Ingeniux CMS Site Instance Started Successfully
+[WARN] [2016-06-15 17:43:49.8397] - [ContentStore: 540a4403-e9f4-4fc4-97ac-90c54571c5fd] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[INFO] [2016-06-15 17:43:58.8721] - Registering CMS AppDomain Listener - 0da53870-2ac6-4f03-a5a5-769835e76675
+[INFO] [2016-06-15 17:43:58.8721] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-15 17:43:59.1061] - Updating CSAPI Indexes
+[INFO] [2016-06-15 17:43:59.9797] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-15 17:44:00.4009] - Ingeniux CMS Site Instance Started Successfully
+[ERROR] [2016-06-15 17:44:19.9165] - [ContentStore: 540a4403-e9f4-4fc4-97ac-90c54571c5fd] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-15 17:44:20.1817] - Publishing Thread Aborted by user
+[WARN] [2016-06-15 17:54:41.7119] - [ContentStore: 0da53870-2ac6-4f03-a5a5-769835e76675] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[ERROR] [2016-06-15 17:55:11.7732] - [ContentStore: 0da53870-2ac6-4f03-a5a5-769835e76675] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-15 17:55:12.0852] - Publishing Thread Aborted by user
+[INFO] [2016-06-15 18:19:22.8370] - Registering CMS AppDomain Listener - 03de98bc-9796-49f5-b32c-d648a79cd5ed
+[INFO] [2016-06-15 18:19:22.8370] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-15 18:19:23.0866] - Updating CSAPI Indexes
+[INFO] [2016-06-15 18:19:23.8510] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-15 18:19:24.1006] - Ingeniux CMS Site Instance Started Successfully
+[WARN] [2016-06-15 19:37:43.4529] - [ContentStore: 03de98bc-9796-49f5-b32c-d648a79cd5ed] AppDomain ShutDown Detected! (Reason: MaxRecompilationsReached)
+[INFO] [2016-06-15 19:37:50.6289] - Registering CMS AppDomain Listener - 27c5369a-3349-4f46-8e3f-447f89a9d591
+[INFO] [2016-06-15 19:37:50.6289] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-15 19:37:50.8161] - Updating CSAPI Indexes
+[INFO] [2016-06-15 19:37:51.4713] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-15 19:37:51.6741] - Ingeniux CMS Site Instance Started Successfully
+[ERROR] [2016-06-15 19:38:13.5141] - [ContentStore: 03de98bc-9796-49f5-b32c-d648a79cd5ed] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-15 19:38:13.7793] - Publishing Thread Aborted by user
+[WARN] [2016-06-15 19:45:38.0681] - [ContentStore: 27c5369a-3349-4f46-8e3f-447f89a9d591] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[ERROR] [2016-06-15 19:46:08.0745] - [ContentStore: 27c5369a-3349-4f46-8e3f-447f89a9d591] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-15 19:46:08.3709] - Publishing Thread Aborted by user
+[INFO] [2016-06-15 19:49:05.2440] - Registering CMS AppDomain Listener - e5e84042-bfa3-4ca4-a44d-e828a1e3a279
+[INFO] [2016-06-15 19:49:05.2440] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-15 19:49:05.4780] - Updating CSAPI Indexes
+[INFO] [2016-06-15 19:49:06.4452] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-15 19:49:06.6480] - Ingeniux CMS Site Instance Started Successfully
+[WARN] [2016-06-16 12:19:12.7067] - [ContentStore: e5e84042-bfa3-4ca4-a44d-e828a1e3a279] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[ERROR] [2016-06-16 12:19:42.7437] - [ContentStore: e5e84042-bfa3-4ca4-a44d-e828a1e3a279] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-16 12:19:43.0089] - Publishing Thread Aborted by user
+[INFO] [2016-06-16 12:20:30.3706] - Registering CMS AppDomain Listener - d2f268b8-cb04-4b8d-a0ec-3f18cacf4880
+[INFO] [2016-06-16 12:20:30.3706] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-16 12:20:30.5578] - Updating CSAPI Indexes
+[INFO] [2016-06-16 12:20:31.3534] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-16 12:20:31.5718] - Ingeniux CMS Site Instance Started Successfully
+[WARN] [2016-06-16 12:50:53.9670] - [ContentStore: d2f268b8-cb04-4b8d-a0ec-3f18cacf4880] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[ERROR] [2016-06-16 12:51:24.0078] - [ContentStore: d2f268b8-cb04-4b8d-a0ec-3f18cacf4880] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-16 12:51:24.2886] - Publishing Thread Aborted by user
+[INFO] [2016-06-16 12:57:34.8205] - Registering CMS AppDomain Listener - 2a4a4239-a977-4a4f-b3c0-06e3691df7d8
+[INFO] [2016-06-16 12:57:34.8361] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-16 12:57:35.0545] - Updating CSAPI Indexes
+[INFO] [2016-06-16 12:57:35.7097] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-16 12:57:35.9281] - Ingeniux CMS Site Instance Started Successfully
+[WARN] [2016-06-16 13:42:13.1268] - [ContentStore: 2a4a4239-a977-4a4f-b3c0-06e3691df7d8] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[ERROR] [2016-06-16 13:42:43.1600] - [ContentStore: 2a4a4239-a977-4a4f-b3c0-06e3691df7d8] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-16 13:42:43.4252] - Publishing Thread Aborted by user
+[INFO] [2016-06-16 13:48:43.6142] - Registering CMS AppDomain Listener - a2a9f0b3-338a-4eed-b4aa-6d6dbcf33703
+[INFO] [2016-06-16 13:48:43.6142] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-16 13:48:43.8326] - Updating CSAPI Indexes
+[INFO] [2016-06-16 13:48:44.4566] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-16 13:48:44.6750] - Ingeniux CMS Site Instance Started Successfully
+[WARN] [2016-06-16 14:44:51.2545] - [ContentStore: a2a9f0b3-338a-4eed-b4aa-6d6dbcf33703] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[ERROR] [2016-06-16 14:45:21.3314] - [ContentStore: a2a9f0b3-338a-4eed-b4aa-6d6dbcf33703] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-16 14:45:21.6122] - Publishing Thread Aborted by user
+[INFO] [2016-06-16 14:47:18.5968] - Registering CMS AppDomain Listener - 72f04895-3147-4939-abef-2ebf42a15664
+[INFO] [2016-06-16 14:47:18.5968] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-16 14:47:18.5968] - Registering CMS AppDomain Listener - ce03f2a3-7314-412b-a958-6d3983dd560a
+[INFO] [2016-06-16 14:47:18.5968] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-16 14:47:18.8152] - Updating CSAPI Indexes
+[INFO] [2016-06-16 14:47:18.8152] - Updating CSAPI Indexes
+[INFO] [2016-06-16 14:47:19.4860] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-16 14:47:19.4860] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-16 14:47:19.7044] - Ingeniux CMS Site Instance Started Successfully
+[INFO] [2016-06-16 14:47:19.7356] - Ingeniux CMS Site Instance Started Successfully
+[WARN] [2016-06-16 16:18:05.8612] - [ContentStore: 72f04895-3147-4939-abef-2ebf42a15664] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[WARN] [2016-06-16 16:18:05.8612] - [ContentStore: ce03f2a3-7314-412b-a958-6d3983dd560a] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[ERROR] [2016-06-16 16:18:35.9483] - [ContentStore: 72f04895-3147-4939-abef-2ebf42a15664] Immediate shutdown imminent, disposing raven document store.
+[ERROR] [2016-06-16 16:18:35.9483] - [ContentStore: ce03f2a3-7314-412b-a958-6d3983dd560a] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-16 16:18:36.2135] - Publishing Thread Aborted by user
+[INFO] [2016-06-16 16:28:51.9622] - Registering CMS AppDomain Listener - 409dce41-7655-4f7b-a958-c0e3df7181cd
+[INFO] [2016-06-16 16:28:51.9622] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-16 16:28:52.1650] - Updating CSAPI Indexes
+[INFO] [2016-06-16 16:28:52.8046] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-16 16:28:52.9918] - Ingeniux CMS Site Instance Started Successfully
+[WARN] [2016-06-16 17:19:59.1928] - [ContentStore: 409dce41-7655-4f7b-a958-c0e3df7181cd] AppDomain ShutDown Detected! (Reason: HostingEnvironment)
+[ERROR] [2016-06-16 17:20:29.2696] - [ContentStore: 409dce41-7655-4f7b-a958-c0e3df7181cd] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-16 17:20:29.5348] - Publishing Thread Aborted by user
+[INFO] [2016-06-16 17:23:26.9851] - Registering CMS AppDomain Listener - f4e6a7bf-b9ad-4fe3-883e-b1c596bbe07a
+[INFO] [2016-06-16 17:23:26.9851] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-16 17:23:27.2191] - Updating CSAPI Indexes
+[INFO] [2016-06-16 17:23:28.1083] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-16 17:23:28.5295] - Ingeniux CMS Site Instance Started Successfully
+[WARN] [2016-06-16 17:39:01.7544] - [ContentStore: f4e6a7bf-b9ad-4fe3-883e-b1c596bbe07a] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[ERROR] [2016-06-16 17:39:31.7907] - [ContentStore: f4e6a7bf-b9ad-4fe3-883e-b1c596bbe07a] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-16 17:39:32.0559] - Publishing Thread Aborted by user
+[INFO] [2016-06-16 17:40:42.5109] - Registering CMS AppDomain Listener - 7f900600-cdd2-4b3a-98b0-6ff89380fa67
+[INFO] [2016-06-16 17:40:42.5109] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-16 17:40:42.7293] - Updating CSAPI Indexes
+[INFO] [2016-06-16 17:40:43.5873] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-16 17:40:43.9773] - Ingeniux CMS Site Instance Started Successfully
+[WARN] [2016-06-16 18:59:53.7592] - [ContentStore: 7f900600-cdd2-4b3a-98b0-6ff89380fa67] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[ERROR] [2016-06-16 19:00:23.8361] - [ContentStore: 7f900600-cdd2-4b3a-98b0-6ff89380fa67] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-16 19:00:24.1013] - Publishing Thread Aborted by user
+[INFO] [2016-06-16 19:00:41.1209] - Registering CMS AppDomain Listener - 6a358026-5ec6-4af2-8075-557b662f3026
+[INFO] [2016-06-16 19:00:41.1209] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-16 19:00:41.3237] - Updating CSAPI Indexes
+[INFO] [2016-06-16 19:00:41.9009] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-16 19:00:42.1037] - Ingeniux CMS Site Instance Started Successfully
+[WARN] [2016-06-17 11:42:41.2903] - [ContentStore: 6a358026-5ec6-4af2-8075-557b662f3026] AppDomain ShutDown Detected! (Reason: MaxRecompilationsReached)
+[INFO] [2016-06-17 11:43:00.2443] - Registering CMS AppDomain Listener - a24a42f6-fe0b-4507-b8d6-95a1f5817f80
+[INFO] [2016-06-17 11:43:00.2443] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-17 11:43:00.4315] - Updating CSAPI Indexes
+[INFO] [2016-06-17 11:43:01.0555] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-17 11:43:01.2427] - Ingeniux CMS Site Instance Started Successfully
+[ERROR] [2016-06-17 11:43:11.3983] - [ContentStore: 6a358026-5ec6-4af2-8075-557b662f3026] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-17 11:43:11.6947] - Publishing Thread Aborted by user
+[WARN] [2016-06-17 13:18:20.5793] - [ContentStore: a24a42f6-fe0b-4507-b8d6-95a1f5817f80] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[ERROR] [2016-06-17 13:18:50.6175] - [ContentStore: a24a42f6-fe0b-4507-b8d6-95a1f5817f80] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-17 13:18:50.8827] - Publishing Thread Aborted by user
+[INFO] [2016-06-17 13:21:48.1146] - Registering CMS AppDomain Listener - be52a41a-aba0-4b43-a30a-3bc58aa7da33
+[INFO] [2016-06-17 13:21:48.1146] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-17 13:21:48.1146] - Registering CMS AppDomain Listener - d2d39bda-e2c9-40a9-96e7-d83ff7179f21
+[INFO] [2016-06-17 13:21:48.1302] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-17 13:21:48.3330] - Updating CSAPI Indexes
+[INFO] [2016-06-17 13:21:48.3330] - Updating CSAPI Indexes
+[INFO] [2016-06-17 13:21:48.9570] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-17 13:21:48.9570] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-17 13:21:49.1130] - Ingeniux CMS Site Instance Started Successfully
+[INFO] [2016-06-17 13:21:49.1598] - Ingeniux CMS Site Instance Started Successfully
+[WARN] [2016-06-17 13:29:19.5638] - [ContentStore: d2d39bda-e2c9-40a9-96e7-d83ff7179f21] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[WARN] [2016-06-17 13:29:19.5638] - [ContentStore: be52a41a-aba0-4b43-a30a-3bc58aa7da33] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[ERROR] [2016-06-17 13:29:49.6220] - [ContentStore: d2d39bda-e2c9-40a9-96e7-d83ff7179f21] Immediate shutdown imminent, disposing raven document store.
+[ERROR] [2016-06-17 13:29:49.6220] - [ContentStore: be52a41a-aba0-4b43-a30a-3bc58aa7da33] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-17 13:29:49.9184] - Publishing Thread Aborted by user
+[INFO] [2016-06-17 13:38:22.3169] - Registering CMS AppDomain Listener - 8f372898-88ba-4ae4-8da4-6599b8b487f5
+[INFO] [2016-06-17 13:38:22.3169] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-17 13:38:22.5197] - Updating CSAPI Indexes
+[INFO] [2016-06-17 13:38:23.1437] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-17 13:38:23.3309] - Ingeniux CMS Site Instance Started Successfully
+[WARN] [2016-06-17 13:40:35.0887] - [ContentStore: 8f372898-88ba-4ae4-8da4-6599b8b487f5] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[INFO] [2016-06-17 13:40:44.3657] - Registering CMS AppDomain Listener - 6b4e7594-5653-4e8b-9b38-a4121a35063b
+[INFO] [2016-06-17 13:40:44.3657] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-17 13:40:44.3657] - Registering CMS AppDomain Listener - e2fda9ea-1af0-423e-9f9d-f6a42be88f24
+[INFO] [2016-06-17 13:40:44.3657] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-17 13:40:44.5997] - Updating CSAPI Indexes
+[INFO] [2016-06-17 13:40:44.5997] - Updating CSAPI Indexes
+[INFO] [2016-06-17 13:40:45.6761] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-17 13:40:45.7073] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-17 13:40:46.2533] - Registering CMS AppDomain Listener - e81fd25c-ad24-4b58-be18-c0a1de9b1f89
+[INFO] [2016-06-17 13:40:46.2533] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-17 13:40:46.3001] - Ingeniux CMS Site Instance Started Successfully
+[INFO] [2016-06-17 13:40:46.3469] - Ingeniux CMS Site Instance Started Successfully
+[INFO] [2016-06-17 13:40:46.3781] - Updating CSAPI Indexes
+[INFO] [2016-06-17 13:40:46.9397] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-17 13:40:47.0177] - Ingeniux CMS Site Instance Started Successfully
+[ERROR] [2016-06-17 13:41:05.1293] - [ContentStore: 8f372898-88ba-4ae4-8da4-6599b8b487f5] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-17 13:41:05.4101] - Publishing Thread Aborted by user
+[WARN] [2016-06-17 13:54:41.6972] - [ContentStore: 6b4e7594-5653-4e8b-9b38-a4121a35063b] AppDomain ShutDown Detected! (Reason: HostingEnvironment)
+[WARN] [2016-06-17 13:54:41.6972] - [ContentStore: e2fda9ea-1af0-423e-9f9d-f6a42be88f24] AppDomain ShutDown Detected! (Reason: HostingEnvironment)
+[WARN] [2016-06-17 13:54:41.6972] - [ContentStore: e81fd25c-ad24-4b58-be18-c0a1de9b1f89] AppDomain ShutDown Detected! (Reason: HostingEnvironment)
+[INFO] [2016-06-17 14:16:32.9860] - Registering CMS AppDomain Listener - 94763cf7-fa64-4905-a533-d4b80decafad
+[INFO] [2016-06-17 14:16:32.9860] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-17 14:16:33.3448] - Updating CSAPI Indexes
+[INFO] [2016-06-17 14:16:34.3120] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-17 14:16:34.7020] - Ingeniux CMS Site Instance Started Successfully
+[WARN] [2016-06-17 14:30:15.8605] - [ContentStore: 94763cf7-fa64-4905-a533-d4b80decafad] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[ERROR] [2016-06-17 14:30:45.9373] - [ContentStore: 94763cf7-fa64-4905-a533-d4b80decafad] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-17 14:30:46.5457] - Publishing Thread Aborted by user
+[INFO] [2016-06-17 14:33:11.9224] - Registering CMS AppDomain Listener - c7970266-240e-4f14-ba54-cdf4c7962781
+[INFO] [2016-06-17 14:33:11.9224] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-17 14:33:11.9224] - Registering CMS AppDomain Listener - afff7dc2-ea0c-459e-ab96-d06747791c30
+[INFO] [2016-06-17 14:33:11.9224] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-17 14:33:12.1720] - Updating CSAPI Indexes
+[INFO] [2016-06-17 14:33:12.1720] - Updating CSAPI Indexes
+[INFO] [2016-06-17 14:33:13.0768] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-17 14:33:13.0768] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-17 14:33:13.3576] - Ingeniux CMS Site Instance Started Successfully
+[INFO] [2016-06-17 14:33:13.4044] - Ingeniux CMS Site Instance Started Successfully
+[WARN] [2016-06-17 16:39:52.1087] - [ContentStore: afff7dc2-ea0c-459e-ab96-d06747791c30] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[WARN] [2016-06-17 16:39:52.1087] - [ContentStore: c7970266-240e-4f14-ba54-cdf4c7962781] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[ERROR] [2016-06-17 16:40:22.1403] - [ContentStore: afff7dc2-ea0c-459e-ab96-d06747791c30] Immediate shutdown imminent, disposing raven document store.
+[ERROR] [2016-06-17 16:40:22.1715] - [ContentStore: c7970266-240e-4f14-ba54-cdf4c7962781] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-17 16:40:22.4367] - Publishing Thread Aborted by user
+[INFO] [2016-06-17 16:43:53.4486] - Registering CMS AppDomain Listener - e95fbb41-07ca-4222-a0b9-95cd7d2e95b8
+[INFO] [2016-06-17 16:43:53.4486] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-17 16:43:53.6826] - Updating CSAPI Indexes
+[INFO] [2016-06-17 16:43:54.6186] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-17 16:43:54.8682] - Ingeniux CMS Site Instance Started Successfully
+[WARN] [2016-06-17 16:45:26.7524] - [ContentStore: e95fbb41-07ca-4222-a0b9-95cd7d2e95b8] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[ERROR] [2016-06-17 16:45:56.8170] - [ContentStore: e95fbb41-07ca-4222-a0b9-95cd7d2e95b8] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-17 16:45:57.0822] - Publishing Thread Aborted by user
+[INFO] [2016-06-17 16:46:38.5003] - Registering CMS AppDomain Listener - 45353650-1a7d-4ed2-93f8-d46b8e99a426
+[INFO] [2016-06-17 16:46:38.5003] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-17 16:46:38.6875] - Updating CSAPI Indexes
+[INFO] [2016-06-17 16:46:39.3271] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-17 16:46:39.4831] - Ingeniux CMS Site Instance Started Successfully
+[WARN] [2016-06-17 16:50:03.9058] - [ContentStore: 45353650-1a7d-4ed2-93f8-d46b8e99a426] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[ERROR] [2016-06-17 16:50:33.9498] - [ContentStore: 45353650-1a7d-4ed2-93f8-d46b8e99a426] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-17 16:50:34.2306] - Publishing Thread Aborted by user
+[INFO] [2016-06-17 16:53:05.8473] - Registering CMS AppDomain Listener - 8bf7f2a0-77b7-46be-b985-973ae68da677
+[INFO] [2016-06-17 16:53:05.8473] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-17 16:53:06.0345] - Updating CSAPI Indexes
+[INFO] [2016-06-17 16:53:06.6273] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-17 16:53:06.8145] - Ingeniux CMS Site Instance Started Successfully
+[WARN] [2016-06-17 16:54:52.1303] - [ContentStore: 8bf7f2a0-77b7-46be-b985-973ae68da677] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[ERROR] [2016-06-17 16:55:22.1779] - [ContentStore: 8bf7f2a0-77b7-46be-b985-973ae68da677] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-17 16:55:22.4743] - Publishing Thread Aborted by user
+[INFO] [2016-06-17 17:00:23.2116] - Registering CMS AppDomain Listener - eb32e4ca-d161-446c-9c2e-4806804a4504
+[INFO] [2016-06-17 17:00:23.2116] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-17 17:00:23.4144] - Updating CSAPI Indexes
+[INFO] [2016-06-17 17:00:24.0540] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-17 17:00:24.2412] - Ingeniux CMS Site Instance Started Successfully
+[WARN] [2016-06-17 17:29:10.1034] - [ContentStore: eb32e4ca-d161-446c-9c2e-4806804a4504] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[ERROR] [2016-06-17 17:29:40.1246] - [ContentStore: eb32e4ca-d161-446c-9c2e-4806804a4504] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-17 17:29:40.4210] - Publishing Thread Aborted by user
+[INFO] [2016-06-17 17:36:28.3773] - Registering CMS AppDomain Listener - c4868680-06ea-42a4-a819-4e2b7519361d
+[INFO] [2016-06-17 17:36:28.3773] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-17 17:36:28.5957] - Updating CSAPI Indexes
+[INFO] [2016-06-17 17:36:29.1885] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-17 17:36:29.3913] - Ingeniux CMS Site Instance Started Successfully
+[WARN] [2016-06-17 17:42:40.2820] - [ContentStore: c4868680-06ea-42a4-a819-4e2b7519361d] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[ERROR] [2016-06-17 17:43:10.2875] - [ContentStore: c4868680-06ea-42a4-a819-4e2b7519361d] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-17 17:43:10.5527] - Publishing Thread Aborted by user
+[INFO] [2016-06-17 17:44:11.9544] - Registering CMS AppDomain Listener - b789a6fe-0173-48a0-b655-0523bc93a8bd
+[INFO] [2016-06-17 17:44:11.9544] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-17 17:44:12.1416] - Updating CSAPI Indexes
+[INFO] [2016-06-17 17:44:12.7812] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-17 17:44:12.9528] - Ingeniux CMS Site Instance Started Successfully
+[WARN] [2016-06-17 17:45:27.7861] - [ContentStore: b789a6fe-0173-48a0-b655-0523bc93a8bd] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[ERROR] [2016-06-17 17:45:57.8607] - [ContentStore: b789a6fe-0173-48a0-b655-0523bc93a8bd] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-17 17:45:58.1259] - Publishing Thread Aborted by user
+[INFO] [2016-06-17 17:46:19.8567] - Registering CMS AppDomain Listener - 3bb3531a-48fd-4671-acc4-a9788f4b37e5
+[INFO] [2016-06-17 17:46:19.8567] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-17 17:46:19.8567] - Registering CMS AppDomain Listener - ca7bf959-aa41-4c00-aad3-1363df911e5b
+[INFO] [2016-06-17 17:46:19.8567] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-17 17:46:20.0595] - Updating CSAPI Indexes
+[INFO] [2016-06-17 17:46:20.0595] - Updating CSAPI Indexes
+[INFO] [2016-06-17 17:46:20.6835] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-17 17:46:20.6835] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-17 17:46:20.8395] - Ingeniux CMS Site Instance Started Successfully
+[INFO] [2016-06-17 17:46:20.8707] - Ingeniux CMS Site Instance Started Successfully
+[WARN] [2016-06-17 17:50:19.8835] - [ContentStore: 3bb3531a-48fd-4671-acc4-a9788f4b37e5] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[WARN] [2016-06-17 17:50:19.8835] - [ContentStore: ca7bf959-aa41-4c00-aad3-1363df911e5b] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[ERROR] [2016-06-17 17:50:49.9742] - [ContentStore: 3bb3531a-48fd-4671-acc4-a9788f4b37e5] Immediate shutdown imminent, disposing raven document store.
+[ERROR] [2016-06-17 17:50:49.9742] - [ContentStore: ca7bf959-aa41-4c00-aad3-1363df911e5b] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-17 17:50:50.2706] - Publishing Thread Aborted by user
+[INFO] [2016-06-17 17:53:52.2610] - Registering CMS AppDomain Listener - 341a3147-b1f2-4f15-ae72-94b12c6257c3
+[INFO] [2016-06-17 17:53:52.2610] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-17 17:53:52.4482] - Updating CSAPI Indexes
+[INFO] [2016-06-17 17:53:53.0566] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-17 17:53:53.2438] - Ingeniux CMS Site Instance Started Successfully
+[WARN] [2016-06-17 18:03:04.9388] - [ContentStore: 341a3147-b1f2-4f15-ae72-94b12c6257c3] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[ERROR] [2016-06-17 18:03:35.0190] - [ContentStore: 341a3147-b1f2-4f15-ae72-94b12c6257c3] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-17 18:03:35.2842] - Publishing Thread Aborted by user
+[INFO] [2016-06-17 18:05:11.3804] - Registering CMS AppDomain Listener - 93db318e-b17d-4049-93a6-bd1af0d290f9
+[INFO] [2016-06-17 18:05:11.3804] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-17 18:05:11.5676] - Updating CSAPI Indexes
+[INFO] [2016-06-17 18:05:12.1760] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-17 18:05:12.3632] - Ingeniux CMS Site Instance Started Successfully
+[WARN] [2016-06-17 18:09:40.2157] - [ContentStore: 93db318e-b17d-4049-93a6-bd1af0d290f9] AppDomain ShutDown Detected! (Reason: ConfigurationChange)
+[ERROR] [2016-06-17 18:10:10.2801] - [ContentStore: 93db318e-b17d-4049-93a6-bd1af0d290f9] Immediate shutdown imminent, disposing raven document store.
+[WARN] [2016-06-17 18:10:10.5453] - Publishing Thread Aborted by user
+[INFO] [2016-06-17 18:13:44.0004] - Registering CMS AppDomain Listener - 055f0177-d940-449e-bca9-5e52908e11aa
+[INFO] [2016-06-17 18:13:44.0004] - Starting Ingeniux CMS Site Instance
+[INFO] [2016-06-17 18:13:44.2032] - Updating CSAPI Indexes
+[INFO] [2016-06-17 18:13:44.8428] - Successfully updated CSAPI Indexes.
+[INFO] [2016-06-17 18:13:45.0456] - Ingeniux CMS Site Instance Started Successfully

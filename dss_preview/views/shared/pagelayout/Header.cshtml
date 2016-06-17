@@ -1,0 +1,55 @@
+﻿@model Ingeniux.Runtime.ICMSElement
+@using Ingeniux.Runtime
+@using System.Xml.Linq;
+@{
+	var home = Model.GetLinkItem("Home");
+}
+<header>
+    <nav class="navbar navbar-default grove-navbar" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="grove-toggle" data-toggle="collapse" data-target=".grove-nav">   <i class="glyphicons show_lines"></i>  </a>
+                <a href="@Model.GetLinkItem("Home").GetAttributeValue("URL")" class="navbar-brand">@_Helpers.RenderImage(Model.Element("Logo"), Url)</a>
+            </div>
+
+            <div class="collapse navbar-collapse grove-nav">
+                <ul class="nav navbar-nav">
+                    @{
+                        foreach (ICMSLinkElement link in Model.GetNavigationItems("MainNavigation"))
+                        {
+                            <li class="active">
+                                @_Helpers.RenderCMSLink(link, Url)
+                            </li>
+                        }
+                    }
+                    
+                    @*<li class="dropdown">
+                        <a href="http://www.ingeniux.com" data-toggle="dropdown">Pages <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="features.html">Features Page</a></li>
+                            <li><a href="pricing.html">Pricing Tables</a></li>
+                            <li><a href="comparison.html">Product Comparison</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="blog-inner.html">Blog Detail</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="portfolio-inner.html">Portfolio Detail</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="login.html">Login/Signup</a></li>
+                            <li><a href="404.html">404</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown">Features <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="glyphicons.html">Glyphicons</a></li>
+                            <li><a href="buttons.html">Buttons</a></li>
+                        </ul>
+                    </li>*@
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>
+    </nav>
+</header>
+

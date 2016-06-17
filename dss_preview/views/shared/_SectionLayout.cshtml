@@ -1,0 +1,64 @@
+﻿@model Ingeniux.Runtime.CMSPageRequest
+@{
+	ViewBag.Title = Model.Element("Title").ToNullHelper().Propagate<string>(ele => ele.Content.Value).Return("Home");
+	Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+@using Ingeniux.Runtime
+@using Ingeniux.Runtime.Models
+@{
+	var sectionControl = Model.Element("SectionControl");
+	var siteControl = (sectionControl != null) ? sectionControl.Element("SiteControl") : null;
+	bool showLeftColumn = (Model.RootElementName != "ConstituentGateway");
+	bool showRightColumn = Model.GetElementValue("ShowRightColumnComponents").EqualsIgnoreCase("true");
+	var pageOverrideRightComp = Model.Elements().Where(ele => ele.GetAttributeValue("Name") == "Right");
+	var compsToDisplay = (pageOverrideRightComp.Any() || sectionControl == null) ? pageOverrideRightComp : sectionControl.Elements().Where(ele => ele.GetAttributeValue("Name") == "Right");
+
+	showRightColumn = (showRightColumn && compsToDisplay.Any()) || Model.RootElementName == "ConstituentGateway";
+
+	String wrapperClass = _Functions.GetClassAttrString("half", showRightColumn);
+	wrapperClass = (Model.RootElementName == "ConstituentGateway") ? _Functions.GetClassAttrString("left") : wrapperClass;
+
+	if (showLeftColumn)
+	{
+	
+	<div class="sidebarBg left">
+		&#160;</div>
+	<div id="contentBg">
+		&#160;</div>
+		Html.RenderPartial("PageLayout/LeftColumn", Model);
+	}
+}
+<div id="wrapper" @Html.Raw(wrapperClass)>
+	@{Html.RenderPartial("PageLayout/AncestorNavigation", Model);}
+	@RenderBody()
+</div>
+@{
+	if (showRightColumn)
+	{
+	<div class="sidebarBg right">
+		&#160;</div>
+	<div class="sidebar right" >
+		@{
+	  
+		if (compsToDisplay.Any())
+		{
+			<ul class="icon-list icon-list2">
+				@{
+			foreach (var comp in compsToDisplay)
+			{
+				try
+				{
+					Html.RenderPartial("Components/" + (comp as CMSPageRequest).RootElementName, comp);
+				}
+				catch (Exception e)
+				{
+					// no view
+				}
+			}
+				}
+			</ul>
+		}
+		}
+	</div>
+	}
+}

@@ -1,0 +1,30 @@
+﻿@model Ingeniux.Runtime.ICMSElement
+@using Ingeniux.Runtime
+<div id="navigation" class="borderBottom">
+	@{
+		var leftNav = Model.GetNavigation("LeftNavigation");
+		if (leftNav != null)
+		{
+			var anavPages = Model.Page.GetNavigationItems("AncestorNavigation").Where(item => item.Schema != "Folder" && item.Schema != "Home");
+		<h2>@_Helpers.RenderCMSLink(anavPages.FirstOrDefault(), Url)</h2>
+			var sectionPage = (anavPages.Any()) ? anavPages.FirstOrDefault() : null;
+			var leftNavLinks = leftNav.GetLinkItems(null, false);
+
+			var sectionPageInLeftNav = (sectionPage != null) ? leftNav.GetLinkItems(null, true).Where(item => item.TargetID == sectionPage.TargetID).FirstOrDefault() : null;
+
+			if (sectionPageInLeftNav != null)
+			{
+				leftNavLinks = sectionPageInLeftNav.GetLinkItems(null, false);
+			}
+		
+		<ul>
+			@{ 
+			foreach (var link in leftNavLinks)
+			{
+				Html.RenderPartial("PageLayout/LeftNavigationPage", link);
+			}
+			}
+		</ul>
+		}
+	}
+</div>

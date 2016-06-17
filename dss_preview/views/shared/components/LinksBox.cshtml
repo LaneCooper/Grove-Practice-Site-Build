@@ -1,0 +1,18 @@
+﻿@model Ingeniux.Runtime.ICMSElement
+@using Ingeniux.Runtime
+
+<div class="col-sm-3">
+    @{
+        if (!Model.GetElementValue("Heading").IsNullOrEmpty()) { 
+            <h4>@Model.GetElementValue("Heading")</h4> 
+        }
+        <ul class="grove-list">
+            @{
+                foreach (ICMSLinkElement link in Model.GetLinkItems())
+                {
+                    @_Helpers.RenderCMSLiWithLink(link, Url)
+                }
+            }
+        </ul>
+    }
+</div>

@@ -1,0 +1,19 @@
+﻿@model Ingeniux.Runtime.ICMSElement
+@using Ingeniux.Runtime
+
+
+@{
+    if (Model != null)
+    {
+        <div class="widget">
+            <h3>Recent Posts</h3>
+            <ul class="grove-list">
+                @{ foreach (ICMSElement page in Model.Elements())
+                    {
+                <li><a href="@page.GetAttributeValue("URL")">@page.GetAttributeValue("Name")</a></li>
+                    }
+                }
+            </ul>
+        </div>
+    }
+}

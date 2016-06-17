@@ -1,0 +1,13 @@
+﻿@model Ingeniux.Runtime.ICMSElement
+@using Ingeniux.Runtime
+
+@{
+    if (Model != null)
+    {
+        <div @_Helpers.RenderICEAttribute(Model)>
+            @Model.Value
+        </div>
+    }
+}
+
+

@@ -1,0 +1,118 @@
+﻿body
+{
+    overflow: auto!important;
+    background: #ECEFF4;
+    padding-bottom: 20px;
+}
+#maincontent
+{
+    margin: 6px 6px 0px 15px;
+    width: 650px;
+}
+
+/* Tab styles */
+.tab_container {
+    border: 1px solid #999;
+    border-top: none;
+    overflow: hidden;
+    clear: both;
+    float: left; width: 100%;
+    background: #fff;
+}
+
+
+.tab_container .ia_control {
+    padding: 15px!important;
+}
+
+.ia_control {
+    padding: 15px 15px 0px 15px;
+    font-size: 1.2em;
+}
+
+.ia_control pre
+{
+    margin: 0px;
+}
+td.th 
+{
+    padding-right: 7px;
+    background-color: #E0E0E0;
+}
+
+th 
+{
+    padding-right: 5px;
+    font-weight: bold;
+}
+
+td, th
+{
+    font-size: 0.8em;
+}
+
+.resultsTable table
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+.resultsTable th
+{
+    background-color: #E0E0E0;
+}
+.resultsTable td, .resultsTable th
+{
+    padding: 0.5em 0.75em;
+    margin: 0px;
+    border-bottom: solid 1px #999;
+}
+
+.djtablewrapper 
+{
+    margin: 18px 0 0;
+}
+
+#form1
+{
+    margin-bottom: 18px;
+}
+
+.floatright
+{
+    float: right;
+}
+
+.righttitle
+{
+    font-family: Arial;
+    font-size: 11px;
+}
+
+.info
+{
+    padding: 0;
+    margin: 0;
+    font-size: 0.8em;
+    font-weight: bold;
+    border-bottom: solid 1px #999;
+}
+
+#viewsandvisitschart
+{
+    margin-top: 12px;
+}
+
+.linear_container{
+    
+}
+
+.whitebox 
+{
+    border: 1px solid #999;
+    background: #fff;
+}
+
+.demo-data
+{
+    /* background: url(../demo-bg.png); */
+}

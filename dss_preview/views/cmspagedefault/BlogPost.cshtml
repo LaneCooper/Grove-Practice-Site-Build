@@ -1,0 +1,312 @@
+﻿@model Ingeniux.Runtime.CMSPageRequest
+@using Ingeniux.Runtime
+
+       
+@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    Html.RenderPartial("Lists/ListofHighlights", new ViewDataDictionary(Model.Element("ListofHighlights")));
+} 
+                    
+                   
+@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    Html.RenderPartial("WorkLink", new ViewDataDictionary(Model.Element("Page")));
+}      
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+<head>
+
+    @{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    Html.RenderPartial("BlogTitle", new ViewDataDictionary(Model.Element("BlogTitle")));
+    }
+
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" href="css/vendor/bootstrap/bootstrap.css">
+
+    <!-- Glyphicons -->
+    <link rel="stylesheet" href="css/vendor/glyphicons/glyphicons.css">
+    <link rel="stylesheet" href="css/vendor/glyphicons/filetypes.css">
+    <link rel="stylesheet" href="css/vendor/glyphicons/social.css">
+
+    <!-- Google Webfonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+
+    <!-- Grove Styles (switch for different color schemes, e.g. "styles-cleanblue.css") -->
+    <link rel="stylesheet" href="css/styles-blue.css" id="grove-styles">
+
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="css/ie8.css">
+        <script src="js/vendor/google/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery/jquery-1.9.1.min.js"><\/script>')</script>
+
+</head>
+<body>
+    <header>
+        <!--
+        <nav class="navbar navbar-default grove-navbar" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="#" class="grove-toggle" data-toggle="collapse" data-target=".grove-nav">   <i class="glyphicons show_lines"></i>  </a>
+                    <a href="index.html" class="navbar-brand"><img src="img/logo.png" alt="Grove"></a>
+                </div>
+
+                <div class="collapse navbar-collapse grove-nav">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="dropdown active">
+                            <a href="#" data-toggle="dropdown">Pages <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="features.html">Features Page</a></li>
+                                <li><a href="pricing.html">Pricing Tables</a></li>
+                                <li><a href="comparison.html">Product Comparison</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="blog-inner.html">Blog Detail</a></li>
+                                <li><a href="portfolio.html">Portfolio</a></li>
+                                <li><a href="portfolio-inner.html">Portfolio Detail</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="login.html">Login/Signup</a></li>
+                                <li><a href="404.html">404</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown">Features <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="glyphicons.html">Glyphicons</a></li>
+                                <li><a href="buttons.html">Buttons</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse 
+            </div>
+        </nav>
+        -->
+        @{
+        Layout = "~/Views/Shared/_MainLayout.cshtml";
+        Html.RenderPartial("BlogHead", new ViewDataDictionary(Model.Element("BlogTitle")));
+        }
+    </header>
+
+    <div class="container" role="main">
+        <div class="row content">
+
+            <div class="col-sm-8">
+                <section id="blog-posts">
+                    <article class="blog-post">
+                        <header>
+                            <h2 class="title">@Model.GetElementValue("BlogTitle")</h2>
+                            <div class="comment-count">
+                                <a href="#comments">
+                                    <span>4 Comments</span>
+                                    <i class="glyphicons conversation"></i>
+                                </a>
+                            </div>
+                        </header>
+
+                        @{
+                        Layout = "~/Views/Shared/_MainLayout.cshtml";
+                        Html.RenderPartial("BlogImage", new ViewDataDictionary(Model.Element("BlogImage")));
+                        }
+                        
+                        @{
+                        Layout = "~/Views/Shared/_MainLayout.cshtml";
+                        Html.RenderPartial("BlogBody", new ViewDataDictionary(Model.Element("BlogBody")));
+                        }
+
+                        @{
+                        Layout = "~/Views/Shared/_MainLayout.cshtml";
+                        Html.RenderPartial("BlogTag", new ViewDataDictionary(Model.Element("BlogTag")));
+                        }
+                        
+                    </article>
+                </section>
+
+                <hr>
+
+                <aside id="comments">
+                    <section id="existing-comments">
+                        <h3>Comments</h3>
+
+                        <div class="comment">
+                            <img src="images/avatar-ar.jpeg" alt="Avatar" class="avatar">
+                            <div class="content">
+                                <span class="author">Alexander</span>
+                                <span class="meta">on April 26, 2013 at 9:54 PM • <a href="#reply" class="reply">Reply</a></span>
+                                <span class="text">
+                                    Pelbagai versi telah timbul dalam tahun tahun yang lepas, kadangkala secara sepontan, dan. Telah yang
+                                    lebih menarik banyak memperlihatkan web sekarang.
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="reply-icon">
+                            <i class="glyphicons unshare"></i>
+                        </div>
+                        <div class="comment reply">
+                            <img src="images/avatar-mb.jpg" alt="Avatar" class="avatar">
+                            <div class="content">
+                                <span class="author">Michael</span>
+                                <span class="meta">on April 26, 2013 at 9:54 PM • <a href="#reply" class="reply">Reply</a></span>
+                                <span class="text">
+                                    Pelbagai versi telah timbul dalam tahun tahun yang lepas, kadangkala secara sepontan, dan. Telah yang
+                                    lebih menarik banyak memperlihatkan web sekarang.
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="comment">
+                            <img src="images/avatar-ar.jpeg" alt="Avatar" class="avatar">
+                            <div class="content">
+                                <span class="author">Alexander</span>
+                                <span class="meta">on April 26, 2013 at 9:54 PM • <a href="#reply" class="reply">Reply</a></span>
+                                <span class="text">
+                                    Pelbagai versi telah timbul dalam tahun tahun yang lepas, kadangkala secara sepontan, dan. Telah yang
+                                    lebih menarik banyak memperlihatkan web sekarang.
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="comment">
+                            <img src="images/avatar-ar.jpeg" alt="Avatar" class="avatar">
+                            <div class="content">
+                                <span class="author">Alexander</span>
+                                <span class="meta">on April 26, 2013 at 9:54 PM • <a href="#reply" class="reply">Reply</a></span>
+                                <span class="text">
+                                    Pelbagai versi telah timbul dalam tahun tahun yang lepas, kadangkala secara sepontan, dan. Telah yang
+                                    lebih menarik banyak memperlihatkan web sekarang.
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="comment">
+                            <img src="images/avatar-mb.jpg" alt="Avatar" class="avatar">
+                            <div class="content">
+                                <span class="author">Michael says:</span>
+                                <span class="meta">April 26, 2013 at 9:54 PM • <a href="#reply" class="reply">Reply</a></span>
+                                <span class="text">
+                                    Pelbagai versi telah timbul dalam tahun tahun yang lepas, kadangkala secara sepontan, dan. Telah yang
+                                    lebih menarik banyak memperlihatkan web sekarang.
+                                </span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr>
+
+                    <section class="reply">
+                        <h3>Leave a Comment</h3>
+
+                        <form action="#" id="reply" method="get" accept-charset="utf-8" class="clearfix">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label for="name">Name</label>
+                                    <input class="form-control input-lg" id="name" type="text" name="name" value="" placeholder="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label for="email">Email Address</label>
+                                    <input class="form-control input-lg" id="email" type="email" name="email" value="" placeholder="">
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label for="website">Website</label>
+                                    <input class="form-control input-lg" id="website" type="url" name="website" value="" placeholder="">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="" for="message">Comment</label>
+                                <textarea class="form-control" id="message" name="Comment" rows="10"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-grove-one btn-xlg btn-bold">Add Comment</button>
+
+                        </form>
+                    </section>
+                </aside>
+            </div>
+
+            <aside class="col-sm-4 blog-sidecolumn">
+
+                <div class="widget searchbox">
+                    <form action="#" id="search" class="search-form" method="get" accept-charset="utf-8">
+                        <input class="form-control input-lg" type="search" name="search" value="" placeholder="Search">
+                    </form>
+                </div>
+
+                @{
+                Layout = "~/Views/Shared/_MainLayout.cshtml";
+                Html.RenderPartial("BlogSummary", new ViewDataDictionary(Model.Element("Summary")));
+                }
+                
+                @{
+                Layout = "~/Views/Shared/_MainLayout.cshtml";
+                Html.RenderPartial("BlogsRecent", new ViewDataDictionary(Model.Element("Navigation")));
+                }
+                
+
+                <div class="widget">
+                    <h3>Categories</h3>
+                    <ul class="grove-list">
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Analytics</a></li>
+                        <li><a href="#">Bootstrap</a></li>
+                        <li><a href="#">Python</a></li>
+                        <li><a href="#">Mobile</a></li>
+                    </ul>
+                </div>
+
+                <div class="widget">
+                    <h3>Archives</h3>
+                    <ul class="grove-list">
+                        <li><a href="#">January 2013</a></li>
+                        <li><a href="#">December 2012</a></li>
+                        <li><a href="#">November 2012</a></li>
+                        <li><a href="#">October 2012</a></li>
+                    </ul>
+                </div>
+
+                <div class="widget">
+                    <h3>Tags</h3>
+                    <ul class="tags-list">
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Education</a></li>
+                        <li><a href="#">Training</a></li>
+                        <li><a href="#">Coding</a></li>
+                        <li><a href="#">Analytics</a></li>
+                        <li><a href="#">Python</a></li>
+                        <li><a href="#">Bootstrap</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+
+        </div>
+    </div>
+
+    
+
+    @{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    Html.RenderPartial("Components/SiteControlComponent", new ViewDataDictionary(Model.Element("SiteControlComponent")));
+    }
+    
+     <script src="js/vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="js/vendor/modernizr/modernizr.js"></script>
+</body>
+</html>

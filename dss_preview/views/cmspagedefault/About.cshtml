@@ -1,0 +1,119 @@
+﻿@model Ingeniux.Runtime.CMSPageRequest
+@using Ingeniux.Runtime
+@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<div class="widewrapper">
+    <div class="container content">
+        <div class="headline top">We deliver solid solutions on time and on budget.</div>
+        <div class="row">
+            <div class="col-sm-6">
+                @{
+					Html.RenderPartial("Editable/BodyCopy", new ViewDataDictionary(Model.Element("BodyCopy")));
+				}
+            </div>
+
+            <div class="col-sm-6 our-skills">
+                <h3>Our Skills</h3>
+
+                <p>Storage Consulting</p>
+                <div class="progress grove-progress">
+                    <div class="progress-bar" style="width: 85%;" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                        <span class="sr-only">85%</span>
+                    </div>
+                </div>
+
+                <p>Server Management</p>
+                <div class="progress grove-progress">
+                    <div class="progress-bar" style="width: 60%;" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                        <span class="sr-only">60%</span>
+                    </div>
+                </div>
+
+                <p>Security Assesments</p>
+                <div class="progress grove-progress">
+                    <div class="progress-bar" style="width: 95%;" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                        <span class="sr-only">95%</span>
+                    </div>
+                </div>
+
+                <p>Disaster Recovery</p>
+                <div class="progress grove-progress">
+                    <div class="progress-bar" style="width: 80%;" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                        <span class="sr-only">80%</span>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="widewrapper weak-highlight">
+    <div class="container content">
+        <div class="showroom-controls">
+            <div class="links">Our Team</div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4 team-member">
+                <img src="images/aboutus/man1.jpg" class="img-responsive" alt="Man 1">
+                <div class="description">
+                    <h4>Jeremy Walker, Founder and CEO</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+
+                    <div class="social-box">
+                        <a href="#" class="social twitter"></a>
+                        <a href="#" class="social linked_in"></a>
+                        <a href="#" class="social google_plus"></a>
+                        <a href="#" class="social e-mail"></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-4 team-member">
+                <img src="images/aboutus/woman1.jpg" class="img-responsive" alt="Man 1">
+                <div class="description">
+                    <h4>Eva Topov, CTO, Linux and Security Crack</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <div class="social-box">
+                        <a href="#" class="social github"></a>
+                        <a href="#" class="social google_plus"></a>
+                        <a href="#" class="social e-mail"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 team-member">
+                <img src="images/aboutus/man2.jpg" class="img-responsive" alt="Man 1">
+                <div class="description">
+                    <h4>Jorge Manzana, Storage and Disaster Recovery</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <div class="social-box">
+                        <a href="#" class="social twitter"></a>
+                        <a href="#" class="social flickr"></a>
+                        <a href="#" class="social vimeo"></a>
+                        <a href="#" class="social wordpress"></a>
+                        <a href="#" class="social e-mail"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="widewrapper strong-highlight">

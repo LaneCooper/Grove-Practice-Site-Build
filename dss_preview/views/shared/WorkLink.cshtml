@@ -1,0 +1,16 @@
+﻿@model Ingeniux.Runtime.ICMSElement
+@using Ingeniux.Runtime
+
+
+@{
+    if (Model != null)
+    {
+        <div class="launch-project">
+            <a class="btn btn-lg btn-grove-three btn-bold" href="@Model.GetAttributeValue("URL")">
+                <i class="glyphicons link"></i>
+                @Model.GetAttributeValue("Link")
+            </a>
+        </div>
+
+    }
+}

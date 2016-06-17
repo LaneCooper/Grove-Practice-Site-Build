@@ -1,0 +1,43 @@
+﻿@model Ingeniux.Runtime.ICMSElement
+@using Ingeniux.Runtime
+
+
+
+<!-- still need to organize all Pages under recent blogs and only present the most recent 4-->
+@{
+    if (Model != null)
+{           <div class="col-sm-9">
+    <div class="showroom-controls">
+        <div class="links">Recent Blog Posts <i class="verticalSeparator"></i> <a href="blog.html">All Blog Posts</a></div>
+    </div>
+    <div class="row">
+        @{ var BlogPosts = from b in Model.Elements()
+                            select b;
+            var SortedBlogPosts = BlogPosts.OrderByDescending(o => o.GetAttributeValue("PublicationDate"));
+            }
+
+        @{foreach (ICMSElement Page in SortedBlogPosts.Take(3))
+            {
+        <div class="showroom-item blog-item col-sm-4">
+            <div class="image">
+                <img src="images/@Page.GetAttributeValue("Thumbnail")" class="img-responsive" alt="Blog Thumbnail">
+                <a href="@Page.GetAttributeValue("URL")" class="overlay">
+                    <i class="glyphicons search"></i>
+                </a>
+            </div>
+            <div class="content">
+                <h3><a href="@Page.GetAttributeValue("URL")">@Page.GetAttributeValue("Title")</a></h3>
+                <span class="meta">Posted by @Page.GetAttributeValue("Author") on @Page.GetAttributeValue("PublicationDate")</span>
+                <span class="preview">
+                    @Page.GetAttributeValue("ShortDescription")
+                </span>
+                <a class="more" href="blog-inner.html">View more</a>
+            </div>
+        </div>
+                }
+            }
+    </div>
+    <div class="clearfix"></div>
+</div>
+    }
+}

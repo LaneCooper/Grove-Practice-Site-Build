@@ -1,0 +1,9 @@
+﻿@model Ingeniux.Runtime.ICMSElement
+@using Ingeniux.Runtime
+
+<div class="clearfix">
+    <blockquote class="pull-right">
+        <p>@Model.GetElementValue("Quote")</p>
+        <small><cite title="Source Title">@Model.GetElementValue("Source")</cite></small>
+    </blockquote>
+</div>

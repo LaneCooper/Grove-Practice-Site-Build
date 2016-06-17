@@ -1,0 +1,28 @@
+﻿@model Ingeniux.Runtime.ICMSElement
+@using Ingeniux.Runtime
+
+@{
+    if (Model != null)
+    {
+
+        <div class="widewrapper weak-highlight">
+            <div class="container content our-clients">
+                <div class="showroom-controls">
+                    <div class="links">Our clients</div>
+                </div>
+                <div class="clients">
+                    @{foreach (ICMSElement client in Model.Elements())
+                        {   <div class="client">
+                    <img src="images/@client.Value" style="height:105px;width:200px"
+                            class="img-responsive" alt="@client.GetAttributeValue("AlternateText")">
+                </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+     }
+}
+
+
+

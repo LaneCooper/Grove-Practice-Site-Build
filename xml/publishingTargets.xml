@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PublishingTargets>
+  <PublishingTarget ID="PublishingTargets/1" Name="Grove" PublishFolder="grove" RootPageID="x2" UserAgentSearchString="" SiteSearchString="" Transform="false" LastPublishDate="" UseStructuredURL="true" HomePageID="x17" NotFoundID="" URLExtension="xml" URLSeparator="-" ForceLowerCaseURL="true" AutoRedirectCanonicalURL="true" IncludeFoldersInURL="false" NormalizeURLSeparators="true" BaseURL="" UseExternalPreviewURL="true" DynamicPublishing="true" ExternalPreviewURL="DssPreview/IGXDynamicPreview" ICEFieldMarkupUpdateURL="DssPreview/IGXDTICEUpdate" GlobalContentRoot="">
+    <Replication DoReplication="false" SimultaneousReplication="false" />
+    <BlockedAccess />
+  </PublishingTarget>
+</PublishingTargets>

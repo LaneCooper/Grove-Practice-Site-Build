@@ -1,0 +1,16 @@
+﻿@model Ingeniux.Runtime.ICMSElement
+@using Ingeniux.Runtime
+
+
+@{
+    if (Model != null)
+    {
+        <ul class="grove-list">
+            @{ foreach (ICMSElement highlight in Model.Elements())
+                {
+                    <li>@highlight.Value</li>
+                }
+            }
+        </ul>
+                }
+}

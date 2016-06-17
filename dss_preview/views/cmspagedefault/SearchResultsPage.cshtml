@@ -1,0 +1,271 @@
+﻿@model Ingeniux.Runtime.CMSPageRequest
+@using Ingeniux.Runtime
+@using System.Text
+@using Ingeniux.Search
+@using Lucene.Net.Documents
+@using Lucene.Net.Search
+@using Lucene.Net.Store
+@using Lucene.Net.Index
+@using Lucene.Net.Search.Highlight
+@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+
+    var allCatIds = new Dictionary<string, int>();
+    var allTypes = new Dictionary<string, int>();
+    SearchResults searchResults = Model.Tag as SearchResults;
+    string term = String.Empty;
+
+    if (string.IsNullOrEmpty(ViewBag.Error) && searchResults != null)
+    {
+        term = searchResults.Query.Terms.JoinString(" ");
+        //var allUnfiltered = searchResults.Items;
+
+        foreach (var result in searchResults.Items)
+        {
+            // Add cats
+            if (result.Tags.Any())
+            {
+                foreach (var cat in result.Tags)
+                {
+                    if (searchResults.Query.Categories.Contains(cat))
+                    {
+                        continue;
+                    }
+                    
+                    if (!allCatIds.ContainsKey(cat))
+                    {
+                        allCatIds.Add(cat, 1);
+                    }
+                    else
+                    {
+                        allCatIds[cat]++;
+                    }
+                }
+            }
+
+            // Add types
+            if (!string.IsNullOrEmpty(result.Type) && !searchResults.Query.Terms.Contains(result.Type))
+            {
+                if (!allTypes.ContainsKey(result.Type))
+                {
+                    allTypes.Add(result.Type, 1);
+                }
+                else
+                {
+                    allTypes[result.Type]++;
+                }
+            }
+        }
+    }
+    int pageSize = 10;
+    int pageNum;
+    if (!int.TryParse(Request.QueryString["page"], out pageNum))
+    {
+        pageNum = 1;
+    }
+    Highlighter highlighter = ViewBag.Highlighter;
+
+    var results = new List<SearchResultItem>();
+    
+    int grandTotal = 0,
+        startingNum = 0,
+        topcount = 0;
+
+    var totalPages = 0;
+
+    if (searchResults != null && searchResults.ResultsCount > 0)
+    {
+        grandTotal = searchResults.ResultsCount;
+        results = searchResults.Items.Skip((pageNum - 1) * pageSize).Take(pageSize).ToList();
+        startingNum = pageSize * (pageNum - 1) + 1;
+        topcount = Math.Min(startingNum + pageSize - 1, grandTotal);
+        totalPages = (int)Math.Ceiling(1.0 * grandTotal / pageSize);
+    }
+
+    <section id="main" class="generic">
+        <div>
+            <div class="main-content sidebar wide-sidebar separated">
+                @Html.Partial("PageLayout/Breadcrumbs")
+                <aside>
+                    <div class="search-results-summary">
+                        @{
+                            if (grandTotal > 0)
+                            {
+                            <p>@grandTotal @_Functions.GetLocalizedString(Model, "ResultsFound", "results found")</p>   
+                            }
+                        }
+                        <div class="heading-2">@_Functions.GetLocalizedString(Model, "Filterby", "Filter by")</div>
+                    </div>
+                    <div class="block box collapsable filter expanded">
+                        <div class="head">
+                            <h4><a href="#">@_Functions.GetLocalizedString(Model, "Category")</a></h4>
+                        </div>
+                        <div class="body">
+                            <ul>
+                                @{
+                                    foreach (var cId in allCatIds)
+                                    {
+                                    <li><a href="@getSearchUrl(addCat: cId.Key)">@cId.Key.Replace("_", " ") (@cId.Value)</a></li>
+                                    }  
+                                    if (!allCatIds.Any())
+                                    {
+                                     <li>@_Functions.GetLocalizedString(Model, "NoCategories", "No available categories")</li>   
+                                    }
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="block box collapsable filter expanded">
+                        <div class="head">
+                            <h4><a href="#">@_Functions.GetLocalizedString(Model, "Type")</a></h4>
+                        </div>
+                        <div class="body">
+                            <ul>
+                                @{
+                                    foreach (var t in allTypes)
+                                    {
+                                    <li><a href="@getSearchUrl(addType: t.Key)">@_Functions.GetFriendlySchemaName(t.Key) (@t.Value)</a></li>
+                                    }
+                                    if (!allTypes.Any())
+                                    {
+                                     <li>@_Functions.GetLocalizedString(Model, "NoTypes")</li>   
+                                    }
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+                <div class="content-container">
+                    <div>
+                        <div class="search-bar">
+                            <div>
+                                <form action="@_Functions.ThisPageUrl(Model, Url)" method="get">
+                                    <input type="text" value="@term" name="term"/>
+                                    <input class="btn btn-primary" type="submit" value="Search" />
+                                </form>
+                            </div>
+                        </div>
+                        @{
+                            if (String.IsNullOrWhiteSpace(term))
+                            {
+                            <p>@_Functions.GetLocalizedString(Model, "NoTerm", "Please enter a search term")</p>
+                            }
+                            else if (grandTotal == 0)
+                            {
+                            <p>@_Functions.GetLocalizedString(Model, "NoResults", "No search results")</p>
+                            }
+                            else
+                            {
+                            <p class="search-results-summary">@_Functions.GetLocalizedString(Model, "Results") @(startingNum + "-" + topcount) @_Functions.GetLocalizedString(Model, "Containing") '@term'</p>
+                       
+                            <div class="search-results">
+                                @foreach (var result in results)
+                                {
+                                    @displayResult(result)
+                                }
+                            </div>
+                            @pageLinks(page => getSearchUrl(pageNum: page), totalPages, pageNum)   
+                            }
+                        }
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+		
+}
+
+@helper displayResult(SearchResultItem resultItem)
+{
+    <div class="result">
+        <h3>@getItemLink(resultItem)</h3>
+        @MvcHtmlString.Create(resultItem.MatchingFrags)
+    </div>
+}
+@helper getItemLink(SearchResultItem resultItem)
+{
+    string path = resultItem.URL;
+    if (resultItem.Type == "Document")
+    {
+        path = "assets/" + path;
+    }
+    <a href="@(Url.Content("~/" + path))" >@(string.IsNullOrEmpty(resultItem.Name) ? path : resultItem.Name)</a>
+}
+@helper getFilterQueryString(List<string> filters, string except = null)
+{
+    var filtersToUse = filters.Except(new[] { except }).ToArray();
+    if (filtersToUse.Any())
+    {
+        string filterQueryStr = HttpUtility.UrlEncode(filtersToUse.Aggregate((s1, s2) => string.Format("{0},{1}", s1, s2)));
+    @(MvcHtmlString.Create(filterQueryStr))
+    }
+}
+@helper getCategoryQueryString(List<string> catIds, string except = null, string add = null)
+{
+    var catsToUse = catIds.Except(new[] { except });
+    if (!string.IsNullOrEmpty(add))
+    {
+        catsToUse = catsToUse.Union(new[] { add });
+    }
+    if (catsToUse.Any())
+    {
+    @(MvcHtmlString.Create(HttpUtility.UrlEncode(catsToUse.Aggregate((s1, s2) => string.Format("{0},{1}", s1, s2)))))
+    }
+}
+@helper getTypeQueryString(List<string> types, string except = null, string add = null)
+{
+    var typesToUse = types.Except(new[] { except });
+    if (!string.IsNullOrEmpty(add))
+    {
+        typesToUse = typesToUse.Union(new[] { add });
+    }
+    if (typesToUse.Any())
+    { 
+    @(MvcHtmlString.Create(HttpUtility.UrlEncode(typesToUse.Aggregate((s1, s2) => string.Format("{0},{1}", s1, s2)))))
+    }
+}
+@helper pageLinks(Func<int, MvcHtmlString> getLinkCallback, int totalPages, int currentPage)
+{
+    int pageLinkCount = 8;
+    int start = Math.Max(1, Math.Min(totalPages - pageLinkCount, currentPage - pageLinkCount / 2));
+    int end = Math.Min(start + pageLinkCount, totalPages);
+    @pageLinks(getLinkCallback, start, end, currentPage, totalPages)
+}
+@helper pageLinks(Func<int, MvcHtmlString> getLinkCallback, int start, int end, int current, int total)
+{
+    <div class="pager-summary">
+        <span class="page">Page @current of @total</span>
+        <ul class="paging">
+            @for (int i = start; i <= end; i++)
+            {
+                if (i == current)
+                {
+                <li class="on">@i</li>
+                }
+                else
+                {
+                <li><a href="@getLinkCallback(i)">@i</a></li>
+                }
+            }
+        </ul>
+    </div>
+}
+@functions
+{
+    MvcHtmlString getSearchUrl(string removeFilter = null, string addCat = null, string removeCat = null, string addType = null, string removeType = null, int pageNum = 0, int pageSize = 10)
+    {
+        var filters = ViewBag.Filters as List<string> ?? new List<string>();
+        var catIds = ViewBag.CatIds as List<string> ?? new List<string>();
+        var types = ViewBag.Types as List<string> ?? new List<string>();
+
+        return new MvcHtmlString(
+            _Functions.ThisPageUrl(Model, Url) +
+            "?term=" + Request.QueryString["term"] +
+            "&catids=" + getCategoryQueryString(catIds, removeCat, addCat).ToHtmlString() +
+            "&types=" + getTypeQueryString(types, removeType, addType).ToHtmlString() +
+            ((pageNum > 0) ? "&page=" + pageNum.ToString() : string.Empty) +
+            ((Request.QueryString["pagesize"] != null) ? "&pagesize=" + Request.QueryString["pagesize"] : string.Empty)
+        );
+    }
+}

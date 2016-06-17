@@ -1,0 +1,36 @@
+﻿@model Ingeniux.Runtime.CMSPageRequest
+@using Ingeniux.Runtime
+@{
+	var sectionControl = Model.Element("SectionControl");
+	var siteControl = (sectionControl != null) ? sectionControl.Element("SiteControlCommon") : null;		
+}
+<div class="sidebar left">
+	@{
+		if (siteControl != null)
+		{
+			Html.RenderPartial("PageLayout/LeftNavigation", siteControl);
+
+			if (Model.GetElementValue("ShowLeftColumnComponents").EqualsIgnoreCase("true"))
+			{
+				//if the page has 'show left column' checked, show components
+				//if components are set on the page, use them
+				var pageOverrideLeftComp = Model.Elements().Where(ele => ele.GetAttributeValue("Name") == "Left");
+				var compsToDisplay = (pageOverrideLeftComp.Any() || sectionControl == null) ? pageOverrideLeftComp : sectionControl.Elements().Where(ele => ele.GetAttributeValue("Name") == "Left");
+				if (compsToDisplay.Any())
+				{
+					foreach (var comp in compsToDisplay)
+					{
+						try
+						{
+							Html.RenderPartial("Components/" + (comp as CMSPageRequest).RootElementName, comp);
+						}
+						catch (Exception e)
+						{
+							// no view
+						}
+					}
+				}
+			}
+		}
+	}
+</div>

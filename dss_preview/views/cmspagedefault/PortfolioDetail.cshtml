@@ -1,0 +1,42 @@
+﻿@model Ingeniux.Runtime.CMSPageRequest
+@using Ingeniux.Runtime
+@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    var compsToDisplay = Model.Element("RightColumnComponents").Elements().Where(ele => ele.GetAttributeValue("Name") == "RightColumnComponent");
+    String mainWidth = (compsToDisplay.Any() || !Model.GetElementValue("PortfolioImage").IsNullOrEmpty()) ? (compsToDisplay.Any() && !Model.GetElementValue("PortfolioImage").IsNullOrEmpty()) ? "col-sm-6" : "col-sm-9" : "col-sm-12";
+}
+
+<div class="widewrapper">
+    <div class="container content">
+        <div class="headline top">@{Html.RenderPartial("Editable/Title", new ViewDataDictionary(Model.Element("Title")));}</div>
+        <div class="row">
+            <div class="col-sm-3">
+                @{
+                    Html.RenderPartial("Editable/PortfolioImage", new ViewDataDictionary(Model.Element("PortfolioImage")));
+                 }
+            </div>
+
+            <div class="@mainWidth">
+                @{
+                    Html.RenderPartial("Editable/BodyCopy", new ViewDataDictionary(Model.Element("BodyCopy")));
+                }
+            </div>
+            <div class="col-sm-3">
+                @{
+                    if (compsToDisplay.Any())
+                    {
+                        foreach (var comp in compsToDisplay)
+                        {
+                            Html.RenderPartial("Components/" + (comp as CMSPageRequest).RootElementName, comp);
+                            
+                        }
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@{
+    Html.RenderPartial("Editable/CallToActionComponent", new ViewDataDictionary(Model.Element("CallToActionComponent", "CalltoAction")));
+}

@@ -1,0 +1,40 @@
+﻿@model Ingeniux.Runtime.CMSPageRequest
+@using Ingeniux.Runtime
+
+@{
+    if (Model != null)
+    {
+
+<div class="widewrapper">
+    <div class="container">
+        <div class="row features">
+            @{foreach (ICMSElement descriptor in Model.Elements())
+                {
+                    if (@descriptor.GetElementValue("Icon") == "Raindrop")
+                    {
+            <div class="col-md-4 feature">
+                <h3><a class="glyphicons tint"></a>@descriptor.GetElementValue("DescriptorTitle")</h3>
+                <p>@Html.Raw(descriptor.GetElementValue("DescriptorText"))</p>
+            </div>
+                    }
+                    if (@descriptor.GetElementValue("Icon") == "Heart")
+                    {
+            <div class="col-md-4 feature">
+                <h3><i class="social skitch"></i>@descriptor.GetElementValue("DescriptorTitle")</h3>
+                <p>@Html.Raw(descriptor.GetElementValue("DescriptorText"))</p>
+            </div>
+                    }
+                    if (@descriptor.GetElementValue("Icon") == "Html")
+                    {
+            <div class="col-md-4 feature">
+                <h3><i class="filetype html"></i>@descriptor.GetElementValue("DescriptorTitle")</h3>
+                <p>@Html.Raw(descriptor.GetElementValue("DescriptorText"))</p>
+            </div>
+                     }
+                    }
+                }
+        </div>
+    </div>
+</div>
+      }
+ }

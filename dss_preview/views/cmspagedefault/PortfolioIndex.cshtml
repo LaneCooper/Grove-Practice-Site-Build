@@ -1,0 +1,46 @@
+﻿@model Ingeniux.Runtime.CMSPageRequest
+@using Ingeniux.Runtime
+@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<div class="widewrapper weak-highlight">
+    <div class="container content">
+        <div class="row">
+            @{
+                Html.RenderPartial("Editable/Banner", new ViewDataDictionary(Model.Element("Banner")));
+            }
+            <div class="col-sm-12">
+                @{
+                    Html.RenderPartial("Editable/Title", new ViewDataDictionary(Model.Element("Title")));
+                }
+                @{
+                    Html.RenderPartial("Editable/BodyCopy", new ViewDataDictionary(Model.Element("BodyCopy")));
+                }
+            </div>
+        </div>
+
+        <div class="row">
+            @{
+
+                foreach (ICMSLinkElement link in Model.GetNavigationItems("PortfolioIndex").Where(l => l.Schema != "Folder"))
+                {
+                    <div class="showroom-item col-sm-3">
+                        <div class="image">
+                            <img src="images/@link.GetAttributeValue("PortfolioImage")" class="img-responsive" alt="@link.GetAttributeValue("AlternateText")">
+                            <a class="overlay" href="@link.GetAttributeValue("URL")">
+                                <i class="glyphicons search"></i>
+                                <div class="name">@Html.Raw(link.GetAttributeValue("Teaser"))</div>
+                            </a>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+
+</div>
+@{
+    Html.RenderPartial("Editable/CallToActionComponent", new ViewDataDictionary(Model.Element("CallToActionComponent")));
+}

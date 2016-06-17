@@ -1,0 +1,44 @@
+﻿@model Ingeniux.Runtime.ICMSElement
+@using Ingeniux.Runtime
+@{	
+	if (Model != null)
+	{
+        foreach (ICMSElement slide in Model.Elements("SlideComponent"))
+        {
+            var capPos = "";
+            var imgPos = "";
+            var imgOff = "";
+        
+            if (slide.GetElementValue("CaptionPosition") == "left")
+        {
+            capPos = "20px";
+            imgPos = "650px";
+            imgOff = "right";
+        }
+        else
+        {
+            capPos = "650px";
+            imgPos = "20px";
+            imgOff = "left";
+        }
+		<div class="ls-slide" data-ls="transition2d:5;">
+            <img class="ls-bg" src="images/@slide.GetElementValue("BackgroundImage")" alt="@slide.Element("BackgroundImage").GetAttributeValue("AlternateText")">
+
+            <img class="ls-l" src="images/@slide.GetElementValue("OverlayImage")" alt="@slide.Element("OverlayImage").GetAttributeValue("AlternateText")"
+                 style="top:100px; left:@imgPos;"
+                 data-ls=" durationin
+                 2000; delayin
+                 0; offsetxin @imgOff ; offsetxout @imgOff ; ">
+
+            <div class=" ls-l large-caption"
+                 style="top:100px; left:@capPos;"
+                 data-ls="delayin: 750; offsetxin: 0; offsetxout: 0;">
+                <div><p>@Html.Raw(slide.GetElementValue("Heading"))</p></div>
+                <div>
+                    @Html.Raw(slide.GetElementValue("Copy"))
+                </div>
+            </div>
+        </div>
+        }
+	}
+}

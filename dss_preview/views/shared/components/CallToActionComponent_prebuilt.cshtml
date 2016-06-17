@@ -1,0 +1,14 @@
+﻿@model Ingeniux.Runtime.ICMSElement
+@using Ingeniux.Runtime
+              
+<div class="widewrapper strong-highlight" @_Helpers.RenderICEAttribute(Model, true)>
+    <div class="container calltoaction">
+        <h3>@Model.GetElementValue("Heading")</h3>
+        @Html.Raw(Model.GetElementValue("Copy"))
+        @{
+            if (Model.GetLinkItems().Any()) {
+            @_Helpers.RenderCMSLink(Model.GetLinkItem("ButtonLink"), Url, "", false, "btn btn-grove-one btn-xlg btn-bold")
+            }
+        }
+    </div>
+</div>      

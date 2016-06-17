@@ -1,0 +1,11 @@
+﻿@model Ingeniux.Runtime.ICMSElement
+@using Ingeniux.Runtime
+
+<div class="col-sm-3">
+    @{
+        if (!Model.GetElementValue("Heading").IsNullOrEmpty()) { 
+            <h4>@Model.GetElementValue("Heading")</h4> 
+        }
+    }
+    @Html.Raw(Model.GetElementValue("Copy"))
+</div>
